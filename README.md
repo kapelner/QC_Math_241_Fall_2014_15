@@ -1,4 +1,9 @@
-QC_Math_241_Fall_2014_15
-========================
+# Math 241 Fall 2014
 
-Course homepage for Math 241 for Fall 2014-15 at Queens College 
+This is the course homepage for Math 241 for the Fall semester 2014-15 at Queens College, City University of New York.
+
+The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Fall_2014_15/master/syllabus/syllabus.pdf). Announcements and links to hhomework assignments and required readings will be posted below.
+
+
+
+
