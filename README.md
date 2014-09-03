@@ -7,6 +7,7 @@ The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_M
 ## Office Hours
 
 Time: Tues 10:30--11AM, 1:45--2:15PM, Thurs 10:30-11AM
+
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
 ## Exams
