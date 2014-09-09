@@ -1,0 +1,242 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}%\toggletrue{spacingmode}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{MATH 214 Fall 2014 Homework \#2}
+
+\author{Professor Adam Kapelner}  %STUDENTS: your name goes here
+
+\iftoggle{professormode}{\date{Due 5PM in my office, Tues Sept 16, 2014}}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''. Feel free to \qu{work out} with others; \ingreen{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, please read Chapter 1 of Hogg, Tanis and Zimmerman (H, T \& Z) pages 1--18 as well as the first six pages of Donald Gillies ``Philosophical Theories of Probability'' chapter 1.\footnote{\url{http://www.amazon.com/Philosophical-Theories-Probability-Issues-Science/dp/041518276X}}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy}; \inyellow{yellow} problems are considered \textit{intermediate}, \inred{red} problems are considered \textit{difficult}; and \inpurple{purple} problems are for \textit{extra credit}. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. I have put more extra credit problems here by popular demand; they are VERY challenging.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. After three days, it will receive a zero because I will post the solutions. 
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and place to put your name.
+
+If you are not doing the homework in \LaTeX, there are two options for hand-in formats: (1) you handwrite on this paper itself and (2) you handwrite on a separate paper. Thus, the compiled PDF of this document will be available on the course homepage in two forms: (1) with vertical spaces for your handwritten answers and (2) without spaces. You must show your work! At least enough of it so that I know you derived the result and not only copied the answer from someone else.
+
+I STRONGLY recommend using strategy number 1. It is not only easy for me to grade your homework, but you always have the questions and answers in one place and it makes for easier referencing. Write your name on page 2 and do not hand in this page. \pagebreak
+\end{abstract}
+}
+
+\iftoggle{professormode}{
+\paragraph{More counting} These counting questions will give you more practice in computing probabilities. Due to computations involving large factorials, we will also review Stirling's Approximation.\\ \\
+}
+
+\problem Imagine you have a bag of 10 cards where 6 are blue and 4 are red. A \qu{draw} means one card is taken out of the bag at random and the color is revealed. If the problem asks \qu{what is the probability,} this means an explicit computation is required unless otherwise stated.
+
+\begin{enumerate}
+\easysubproblem What is the probability of getting a blue card when drawing one card? \spc{1}
+
+\easysubproblem What is the probability of drawing 3 red cards in a row \textit{with replacement}? \spc{1.5}
+
+\easysubproblem What is the probability of drawing 3 red cards in a row \textit{without replacement}? \spc{1.5}
+
+\intermediatesubproblem Five cards are drawn. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? \spc{3.5}
+
+\hardsubproblem Five cards are drawn. What is the probability of having 3 reds and 2 blues in that order? Think carefully about the numerator and denominator in this probability computation. \spc{3}
+
+\intermediatesubproblem Five cards are drawn from a new bag with 100 cards where 60 are blue and 40 are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? \spc{3.5}
+
+\intermediatesubproblem Five cards are drawn from a new bag with 1000 cards where 600 are blue and 400 are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? \spc{4}
+
+\intermediatesubproblem Five cards are drawn from a new bag with $n$ cards where $0.6n$ are blue and $0.4n$ are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? Do not compute the probability explicitly here; leave your solution as an algebraic expression \ie as a function of $n$. \spc{6.5}
+
+\hardsubproblem 500 cards are drawn at random from the same bag as problem (g) --- 1,000 cards where 600 are blue and 400 are red. What is the probability of getting 250 blue cards and 250 red cards without regads to the order of the cards? The answer should be computed explicitly. See your notes on using logs in conjuction with Stirling's Approximation. If you are running short on time, you do not have to complete this problem, just write about how it would be completed. \spc{10.5}
+
+\extracreditsubproblem Take the limit in problem (h) as $n \rightarrow \infty$ and compute the probability explicitly. Is the answer similar to f and g? Comment on the similarity of sampling \textit{with replacement} and sampling \textit{without replacement} when the bag is large. \spc{10}
+
+\end{enumerate}
+
+\problem Combinations are not only useful in probability problems. They come up all over mathematics.
+
+\begin{enumerate}
+\intermediatesubproblem The first lecture we mentioned that $\abss{2^\Omega} = 2^{|\Omega|}$. (recall that the powerset contains all subsets of $\Omega$ \ie $A \in 2^\Omega~~\forall A \subseteq \Omega$). We reasoned that each $\omega \in \Omega$ can be either \textit{in} or \textit{out} of a subset. Thus on/off for the first outcome, on/off for the second outcome, etc. to make 2 raised to the number of elements. This will count every possibly subset. All \qu{offs} would result in $\varnothing$ and all \qu{ons} will result in $\Omega$. 
+
+Assume $\Omega = \braces{a,b,c,d}$. Explain \textit{in English} how the following equation is true by explaining each element in the sum.
+
+\beqn
+\abss{2^\Omega} = \sum_{i=1}^{|\Omega|} \binom{|\Omega|}{i}
+\eeqn
+
+It may be helpful to draw out $2^\Omega$ explicitly and write out the above equation in order to see the pattern. Each of the combination terms will correspond to a subset of $2^\Omega$. \spc{4.5}
+
+
+\intermediatesubproblem Explain \textit{in English} why the binomial expansion below is true.
+
+\beqn
+(a + b)^n = \sum_{k=0}^n \binom{n}{k} b^k a^{n-k}
+\eeqn
+
+Try to do this yourself. If you are having trouble, paraphrase the reasoning found on page 15, example 1.2-10.  \spc{5}
+
+\easysubproblem  Explain \textit{in English} why are the $\binom{n}{k}$ terms called \qu{binomial coefficients.} \spc{2.5}
+
+
+\extracreditsubproblem Prove the equality in part (a) for arbitrary but finite-sized $\Omega$. \spc{9}
+
+\extracreditsubproblem Prove the binomial expansion in part (b) for arbitrary $n \in \naturals$. \spc{10}
+
+\end{enumerate}
+
+\problem This problem involves using the multinomial coefficient to solve problems.
+
+\begin{enumerate}
+\easysubproblem Imagine you have 12 flowers: 4 red and 3 blue and 5 white. How many ways are there to arrange them in 12 flower pots. \spc{1.5}
+
+\easysubproblem We add 2 orange flowers to collection in part (a). How many ways to arrange the flowers now? \spc{1.5}
+
+\easysubproblem Imagine we have 5 flowers: one white, one blue, one red, one orange and one purple. How many ways to arrange them? Use the multinomial coefficient and show that it is equal the number you arrive at using the permutation concept from lecture 2. \spc{2.5}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Probability as Applied Set Theory} Problems below are related to set theory and probability\\ \\
+}
+
+\problem We will get our feet wet with basic \qu{axioms} and theorems. Assume all capital letters are sets. If the problem asks you to prove a fact, you may only use your knowledge of set theory and the definition of $\prob{\cdot}$ given in the book / lecture. Some of the answers are in the book. Try to do them yourself and only use the book if you are having trouble. The extra credits are really, really difficult.
+
+\begin{enumerate}
+\easysubproblem List all assumptions prior to and the three conditions that make $\prob{\cdot}$, the set function that returns a probability. These three conditions are also known as the \qu{axioms of probability.} \spc{3.5}
+
+\easysubproblem Prove that if $A_1$ and $A_2$ are disjoint (mutually exclusive), $\prob{A_1 \cup A_2} = \prob{A_1} + \prob{A_2}$. \spc{1.5}
+
+\easysubproblem Prove that $\prob{\varnothing} = 0$. \spc{2.5}
+
+\intermediatesubproblem Prove that $\prob{A} \in \zeroonecl$. \spc{3.5}
+
+\hardsubproblem Prove that if $A \subseteq B$ then $\prob{A} \leq \prob{B}$. \spc{3.5}
+
+\hardsubproblem Prove that $\prob{A \cup B} = \prob{A} + \prob{B} - \prob{A, B}$. \spc{4.5}
+
+\extracreditsubproblem Describe a sequence of sets $A_1, A_2, \ldots$ which are all non-empty where $\sum_{i=1}^\infty \prob{A_i} = 1$. \qu{Describe} means to explicitly state the elements in each of the sets. Hint: the sets do not have to be finite nor countable for that matter. I strongly suggest you also construct $A_1, A_2, \ldots$ as disjoint otherwise the sum of their probabilities may be greater than 1. \spc{7.5}
+
+\extracreditsubproblem Let $A_1 \subseteq A_2 \subseteq A_3 , \subseteq \ldots$ (this is called a sequence of \qu{increasing events.}) Prove that:
+
+\beqn
+\limitn \prob{A_n} = \prob{\limitn A_n}
+\eeqn
+
+~\spc{7.5}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Philosophy of Probability} Problems below are related to the readings in Gillies as well as the material we covered in class.\\ \\ 
+}
+
+\problem Answer the following questions by writing a paragraph or two \textit{in English}.
+
+\begin{enumerate}
+\easysubproblem Which definition of probability does the book use and why do you think the authors chose this definition? \spc{4.5}
+
+\easysubproblem  Give an example of an event whose probability cannot be approximated by the limiting frequency. \spc{1.5}
+
+\intermediatesubproblem Give an example of a random event involving an object's \qu{propensity} and explain this definition of probability. \spc{2.5}
+
+\easysubproblem Discuss the difference between the \qu{logical} and the \qu{subjective} definition of probability. \spc{4.5}
+
+
+\easysubproblem Explain the difference between \qu{objective} and \qu{epistemological} interpretations of probability. Which definitions fall under these categories? Classify all four of Gillies' definitions in this way. \spc{3.5}
+
+
+\hardsubproblem Who picks $\omega \in \Omega$ \ie the outcome from the set of possible outcomes in the universe? Discuss your thoughts. \spc{3.5}
+
+\extracreditsubproblem Is probability an illusion or is it real? Is randomness a fundamental property of the universe? Discuss your thoughts. \spc{10}
+
+\end{enumerate}
+
+\problem We will be looking into the long term frequency definition here. For this problem, you must have \texttt{R} installed. Please download it from \url{http://cran.r-project.org/} (there are links for Windows, MAC and Linux) and then double-click to open an \texttt{R} console.
+
+\begin{enumerate}
+
+\easysubproblem To calculate combinations, use the \texttt{choose(n,k)} function. Calculate the number of five-card hands from a standard deck by copying the following code into \texttt{R} and then pressing enter:
+
+\begin{knitrout}
+\begin{kframe}
+\begin{verbatim}
+choose(52, 5)
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Please write down the answer. Is the answer the same as we computed in class? \spc{2.5}
+
+\easysubproblem Verify the probability in class of a ``full house'' by copying the following code into \texttt{R} and then pressing enter:
+
+\begin{knitrout}
+\begin{kframe}
+\begin{verbatim}
+choose(13, 1) * choose(4, 3) * choose(12, 1) * choose(4, 2) / 
+  choose(52, 5)
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Write down the answer as a \textit{percentage}. \spc{2.5}
+
+\intermediatesubproblem We are going to do a little experiment to explore the definition of probability as a limiting frequency. We will be looking at the context of flipping a coin and getting heads. Remember the definition was
+
+\beqn
+\prob{\braces{H}} = \limitn \frac{\displaystyle \sum_{i=1}^n \indic{\omega_i \in \braces{H}}}{n}
+\eeqn
+
+(where $\indic{T}$ is the \qu{indicator function} which equals 1 when the expression $T$ is true and 0 if the expression $T$ is false). We will run a simulation with large values of $n$. Copy and paste the following code into your \texttt{R} terminal:
+
+\begin{knitrout}
+\begin{kframe}
+\begin{verbatim}
+N = 30000
+sims = sample(0:1, N, replace = T)
+freqs_by_n = array(NA, N)
+for (n in 1 : N){
+  freqs_by_n[n] = sum(sims[1:n]) / n
+}
+plot(10:N, 
+  freqs_by_n[10:N], 
+  xlim = c(10, N), 
+  ylim = c(0.40, 0.60), 
+  pch = ".", 
+  xlab = "number of samples",
+  ylab = "frequency of heads",
+  main = "P(H) as a limiting frequency: 30,000 samples")
+abline(h = 0.5, col = "blue")
+freqs_by_n[N]
+#last line placeholder
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The console should have popped up a plot.\footnote{This is a \textit{real} statistical simulation. Each time you run this code it will be different. You can compare plots with your friends but take note that they will not look exactly the same.} Print this out and attach it to your homework. If you are using \LaTeX, you can include the figure into the PDF.
+
+From the title of the plot and the x and y axes, tell a story about what is going on here \textit{in English}. \spc{4.5}
+
+\easysubproblem What is the limiting frequency of heads after 30,000 coin flips to 3 decimals based on the simulation in the previous problem? (that is the number that appears in the console directly after ``\texttt{$>$ freqs\_by\_n[N]}'') \spc{1.5}
+
+\end{enumerate}
+
+\end{document}
