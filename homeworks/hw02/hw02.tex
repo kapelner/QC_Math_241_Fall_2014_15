@@ -2,7 +2,7 @@
 
 \include{preamble}
 
-\newtoggle{spacingmode}%\toggletrue{spacingmode}
+\newtoggle{spacingmode}\toggletrue{spacingmode}
 
 \newtoggle{professormode}
 \toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
@@ -64,11 +64,13 @@ I STRONGLY recommend using strategy number 1. It is not only easy for me to grad
 
 \intermediatesubproblem Five cards are drawn from a new bag with 1000 cards where 600 are blue and 400 are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? \spc{4}
 
-\intermediatesubproblem Five cards are drawn from a new bag with $n$ cards where $0.6n$ are blue and $0.4n$ are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? Do not compute the probability explicitly here; leave your solution as an algebraic expression \ie as a function of $n$. \spc{6.5}
+\intermediatesubproblem Five cards are drawn from a new bag with $n$ cards where $0.6n$ are blue and $0.4n$ are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards? Do not compute the probability explicitly here; leave your solution as an algebraic expression \ie as a function of $n$. \spc{8.5}
 
-\hardsubproblem 500 cards are drawn at random from the same bag as problem (g) --- 1,000 cards where 600 are blue and 400 are red. What is the probability of getting 250 blue cards and 250 red cards without regads to the order of the cards? The answer should be computed explicitly. See your notes on using logs in conjuction with Stirling's Approximation. If you are running short on time, you do not have to complete this problem, just write about how it would be completed. \spc{10.5}
+\intermediatesubproblem Approximate $\natlog{1000!}$. See your notes on using logs in conjuction with Stirling's Approximation. \spc{10.5}
 
-\extracreditsubproblem Take the limit in problem (h) as $n \rightarrow \infty$ and compute the probability explicitly. Is the answer similar to f and g? Comment on the similarity of sampling \textit{with replacement} and sampling \textit{without replacement} when the bag is large. \spc{10}
+\extracreditsubproblem 500 cards are drawn at random from the same bag as problem (g) --- 1,000 cards where 600 are blue and 400 are red. What is the probability of getting 250 blue cards and 250 red cards without regads to the order of the cards? The answer should be computed explicitly.  \spc{10.5}
+
+\extracreditsubproblem Take the limit in problem (j) as $n \rightarrow \infty$ and compute the probability explicitly. Is the answer similar to f and g? Comment on the similarity of sampling \textit{with replacement} and sampling \textit{without replacement} when the bag is large. \spc{7}
 
 \end{enumerate}
 
@@ -127,13 +129,13 @@ Try to do this yourself. If you are having trouble, paraphrase the reasoning fou
 
 \easysubproblem Prove that $\prob{\varnothing} = 0$. \spc{2.5}
 
-\intermediatesubproblem Prove that $\prob{A} \in \zeroonecl$. \spc{3.5}
+\intermediatesubproblem Prove that $\prob{A} \in \zeroonecl$. \spc{5.5}
 
 \hardsubproblem Prove that if $A \subseteq B$ then $\prob{A} \leq \prob{B}$. \spc{3.5}
 
 \hardsubproblem Prove that $\prob{A \cup B} = \prob{A} + \prob{B} - \prob{A, B}$. \spc{4.5}
 
-\extracreditsubproblem Describe a sequence of sets $A_1, A_2, \ldots$ which are all non-empty where $\sum_{i=1}^\infty \prob{A_i} = 1$. \qu{Describe} means to explicitly state the elements in each of the sets. Hint: the sets do not have to be finite nor countable for that matter. I strongly suggest you also construct $A_1, A_2, \ldots$ as disjoint otherwise the sum of their probabilities may be greater than 1. \spc{7.5}
+\extracreditsubproblem Describe a sequence of sets $A_1, A_2, \ldots$ which are all non-empty where $\sum_{i=1}^\infty \prob{A_i} = 1$. \qu{Describe} means to explicitly state the elements in each of the sets. Hint: the sets do not have to be finite nor countable for that matter. I strongly suggest you also construct $A_1, A_2, \ldots$ as disjoint otherwise the sum of their probabilities may be greater than 1. \spc{8.5}
 
 \extracreditsubproblem Let $A_1 \subseteq A_2 \subseteq A_3 , \subseteq \ldots$ (this is called a sequence of \qu{increasing events.}) Prove that:
 
@@ -152,7 +154,7 @@ Try to do this yourself. If you are having trouble, paraphrase the reasoning fou
 \problem Answer the following questions by writing a paragraph or two \textit{in English}.
 
 \begin{enumerate}
-\easysubproblem Which definition of probability does the book use and why do you think the authors chose this definition? \spc{4.5}
+\easysubproblem Which definition of probability does the book use and why do you think the authors chose this definition? \spc{5.5}
 
 \easysubproblem  Give an example of an event whose probability cannot be approximated by the limiting frequency. \spc{1.5}
 
@@ -164,7 +166,7 @@ Try to do this yourself. If you are having trouble, paraphrase the reasoning fou
 \easysubproblem Explain the difference between \qu{objective} and \qu{epistemological} interpretations of probability. Which definitions fall under these categories? Classify all four of Gillies' definitions in this way. \spc{3.5}
 
 
-\hardsubproblem Who picks $\omega \in \Omega$ \ie the outcome from the set of possible outcomes in the universe? Discuss your thoughts. \spc{3.5}
+\extracreditsubproblem Who picks $\omega \in \Omega$ \ie the outcome from the set of possible outcomes in the universe? Discuss your thoughts. \spc{3.5}
 
 \extracreditsubproblem Is probability an illusion or is it real? Is randomness a fundamental property of the universe? Discuss your thoughts. \spc{10}
 
@@ -197,7 +199,7 @@ choose(13, 1) * choose(4, 3) * choose(12, 1) * choose(4, 2) /
 \end{kframe}
 \end{knitrout}
 
-Write down the answer as a \textit{percentage}. \spc{2.5}
+Write down the answer as a \textit{percentage}. \spc{3.5}
 
 \intermediatesubproblem We are going to do a little experiment to explore the definition of probability as a limiting frequency. We will be looking at the context of flipping a coin and getting heads. Remember the definition was
 
