@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{MATH 241 Fall 2014 Homework \#3}
+
+\author{Professor Adam Kapelner}
+
+\iftoggle{professormode}{
+\date{Due 5PM in my office, Tues Sept 23, 2014 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \ingreen{I want you to work on this in groups.} %As 8x Mr. Olympia bodybuilder Ronnie Coleman says, \qu{everyone wants to be a bodybuilding, no one wants to lift no heavy @\$\#\%\$ weights.}
+
+Reading is still \textit{required}. For this homework set, please read all of Chapter 1 of Hogg, Tanis and Zimmerman (H, T \& Z).
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy}; \inorange{yellow} problems are considered \textit{intermediate}, \inred{red} problems are considered \textit{difficult}; and \inpurple{purple} problems are for \textit{extra credit} which are also marked \qu{[E.C.].} The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. After three days, it will receive a zero because I will hand out the solutions. 
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and place to put your name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures.
+
+The document is available with spaces for you to write your answers. You are free to handwrite on separate paper if you wish but I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. On the following page, write your name and section: section A is 9:15AM--10:30AM and section B is 12:15PM-1:30PM.
+\pagebreak
+\end{abstract}
+}
+
+NAME: \line(1,0){275} ~~SECTION (A or B): \line(1,0){40}
+% NAME: John Doe ~~Section: A %%%STUDENTS: uncomment this line, add your name and section and then delete the line above
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%BEGIN PROBLEMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\iftoggle{professormode}{
+\paragraph{1,2, \ldots} This section will cover more counting concepts.\\
+}
+
+
+\problem You are playing billiards. There are 15 balls on the table (save the cue ball which we are ignoring) and 6 pockets the balls can go into (4 corner pockets and two side pockets, displayed below). The goal of the game you are playing is to get all the 15 balls into any of the pockets. 
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3.5in]{billiards.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+
+\begin{enumerate}
+\easysubproblem After the break shot, miraculously, all of the balls except one goes into each of the 6 pockets and you are left with one ball you need to pocket to win. Assuming each pocket is distinct but the 15 target balls are indistinct, how many ways is there to win? That is, how many configurations of balls in holes are there after the last ball has been sunk? \spc{3}
+
+\easysubproblem On your second game, you sink no balls on the break shot. How many ways is there to win if you assume at least one ball goes into each hole? \spc{3}
+
+\hardsubproblem On the game in (b), how many ways are there to win if you don't care which pockets have which balls? Phrased equivalently, the pockets are no longer distinct. Phrased equivalently again, the pockets are now indistinguishable from each other.  \spc{3}
+
+\extracreditsubproblem On the game in (b), let's say you win a special prize if the holes have three holes have 6 balls and the other three holes have one ball. You don't care which pockets have which balls but assume that each pocket has at least one ball. What is the probability you win this special prize upon sinking all balls? Assume that balls go into random pockets. Kind of silly... but it makes you think.  \spc{2}
+
+\extracreditsubproblem How many configurations of balls in holes are there if you do not have to assume pockets need one ball?  \spc{3}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{1776} This section will cover independence.\\
+}
+
+
+\problem Probability is rooted in gambling and thus we will be analyzing some gambling games. We will introduce the game of Roulette here. Basically, there's a ball that is dropped onto a spinning wheel with pockets for the ball to fall once the wheel and ball run out of momentum. There are 18 red pockets and 18 black pockets. There are two flavors of the game:
+
+\begin{itemize}
+\item European: There is one additional pocket colored green and labeled 0 (for a total of 18+18+1=37 pockets). An example of this wheel is pictured below on the left.
+\item American: There are two additional pockets colored green labeled 0 and 00 (for a total of 18+18+2=38 pockets). An example of this wheel is pictured below on the right.
+\end{itemize}
+
+The gambler can make bets on any of the spaces as well as red, black, green, an odd number, an even number and a slew of other exotic type bets which we won't enumerate. We will be analyzing payoffs when we get to random variables next week but we will not be discussing them now.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in]{roulette.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem What is the probability of the ball landing in a black pocket? Calculate for both European and American roulette.\spc{2}
+
+\easysubproblem What is the probability of the ball landing in a green pocket? Calculate for both European and American roulette. \spc{2}
+
+\easysubproblem In America, you play the game 10 times and always bet on black. What is the probability you win all 10 times? \spc{2}
+
+\intermediatesubproblem In America, you play the game 10 times and always bet on black. What is the probability you win at least once? \spc{2}
+
+\intermediatesubproblem In America, you make a huge bet on black and you can't bear to look. Your friend tells you it didn't land on red. What is the probability you won? \spc{2}
+
+\extracreditsubproblem  In America, you play the game 10 times and always bet on black. What is the probability you win five times? \spc{5}
+
+\end{enumerate}
+
+
+\iftoggle{professormode}{
+\paragraph{The pipe command} This section will cover conditional probability and using tree illustrations to solve problems.\\
+}
+
+
+\problem New York is a \qu{concrete jungle where dreams are made of.} To this extent, a young upstart tries to drum up business in the three tallest buildings in the city. Below from left to right are pictured One World Trade Center (104 floors), the Empire State Building (103 floors) and the Chrysler Building (77 floors). Consider the case where this person enters one of the three buildings randomly and goes to a random floor.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3.5in]{buildings.png}
+\end{figure}
+\FloatBarrier
+}
+
+\noindent 
+
+\begin{enumerate}
+\easysubproblem Draw a probability tree of this random event. Use ``...'' notation so your trees don't take up the whole page. \spc{8}
+
+\easysubproblem Are the building selection and floor selection \textit{independent} (\ie \textit{informationall irrelevant})? Justify your answer using the definition of statistical independence. \spc{0.5}
+
+\easysubproblem What is the probability of the businessman winding up on floor 23 of One World Trade Center on a given day?  \spc{4}
+
+\intermediatesubproblem What is the probability of the businessman winding up on floor 23 of any building on a given day?  \spc{3}
+
+\easysubproblem If the businessman is on floor 60, what is the probability he is in the Chrysler Building?  \spc{3}
+
+\easysubproblem What are the \textit{odds} he winds up on any floor between 1 through 77? Interpret \qu{odds} to mean what it usually means: \textit{odds against}.  \spc{4}
+
+\intermediatesubproblem Let's say the businessman does this straight for four weeks, five days per week. What is the probability he winds up on floor 32 every business trip?  \spc{3}
+
+\extracreditsubproblem In one week, the businessman was on floor 12, 15 18, 32 and 59. What is the probability he visited One World Trade Center for more than one of those days?  \spc{6}
+
+\end{enumerate}
+
+
+\problem  Assume that the overall probability of contracting breast cancer in a 45 year old American woman is 0.1\% on average (or one in a thousand). A typical diagnostic test is a mammographic scane. Assume also that a mammograph scan reading is 80\% \textit{sensitive} on average and 95\% \textit{specific} on average. Here, \qu{sensitive} means among patients with cancer, the probability that the test is positive and \qu{specific} means among patients without cancer, the probability that the test is negative.
+
+
+\begin{enumerate}
+\easysubproblem  Denote cancer as $C$ and no cancer as $C^C$ and mammography positive as $T$ and mammography negative as $T^C$. What is $\prob{C}$, $\cprob{T}{C}$ and $\cprob{T^C}{C^C}$? These are readable from the problem statement above. You must use this notation going forward to get full credit. \spc{1}
+
+\easysubproblem Now solve for $\prob{C^C}$, $\cprob{T^C}{C}$ and $\cprob{T}{C^C}$ using the complement rule. \spc{2}
+
+\easysubproblem Draw a tree with two branches: $C$ vs. $C^C$ and then draw a second set of branches for $T$ vs. $T^C$ (four branches). Mark all four conditional probabilities in this tree's configuration and all four marginal probabilities on the right. Check your answers by assuring that these four marginal probabilities form a partition of $\prob{\Omega} = 1$. \spc{8}
+
+
+\intermediatesubproblem What is $\prob{T}$? Use the law of total probability here and explain what the law is and how exactly you're using it to solve this problem. \spc{4}
+
+
+
+\hardsubproblem What does $\prob{T}$ mean? Answer \textit{in English}. \spc{3}
+
+\intermediatesubproblem Now the money question: if a woman is scanned and tests positive, what is the probability she has cancer? Use the notation I have provided and answer as a \textit{percentage} so it is more viscerally interpretable to you.\spc{3}
+
+\intermediatesubproblem You may have done the previous question over and over and gotten frustrated. Your answer is probably correct though. Can you explain why it's so low? Comment on the usefulness of mammography given the post test probability of cancer which you computed. \spc{4}
+
+
+\intermediatesubproblem If a woman is scanned and tests positive, what is the probability she does \textit{not} have cancer? \spc{3}
+
+\intermediatesubproblem If a woman is scanned and tests negative, what is the probability she does \textit{not} have cancer? \spc{3}
+
+\intermediatesubproblem What is the ratio of $\frac{\cprob{C}{T}}{\prob{C}}$? What does this ratio mean? What does your answer suggest? Is it possible these scans aren't such a terrible diagnostic tool after all?  \spc{5}
+
+\intermediatesubproblem What is the ratio of $\frac{\cprob{C}{T}}{\cprob{C}{T^C}}$? What does this ratio mean? What does your answer suggest? Is it possible these scans aren't such a terrible diagnostic tool after all?  \spc{5}
+
+\end{enumerate}
+
+\problem  You play a game with your friend. You both roll a die. Whoever rolls higher wins. If you roll the same number, you tie.
+
+\begin{enumerate}
+\easysubproblem What is the probability you tie?  \spc{1}
+
+\intermediatesubproblem What is the probability you win? Draw a tree to figure this out. The first branch is the numerical value of your roll, the second branch is whether you Win (W), Tie (T) or Lose (L).  \spc{8}
+
+\intermediatesubproblem Imagine upon ties, the game continues, and you both roll again. You play until someone has a higher roll than the other. What is the probability you win this game? Use the algebraic trick we talked about in class.  \spc{6}
+
+\extracreditsubproblem What are fair odds on a game where your friend automatically wins if you both tie on rolling a 1?  \spc{6}
+
+\end{enumerate}
+
+\end{document}
