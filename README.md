@@ -17,7 +17,9 @@ Tues, Sept 23 9:15AM - noon in Kiely 270. No class Thurs, Oct 9 and Thurs, Oct 1
 
 ## Exams
 
-TBA
+* Midterm I - Thursday, October 2 (in class)
+* Midterm II - Thursday, November 13 (in class)
+* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA
 
 ## Office Hours
 
