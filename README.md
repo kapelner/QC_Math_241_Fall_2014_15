@@ -4,6 +4,8 @@ This is the course homepage for Math 241 for the Fall semester 2014-15 at Queens
 
 The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Fall_2014_15/master/syllabus/syllabus.pdf). Announcements and links to homework assignments and required readings will be posted below.
 
+You can check your grades in realtime [here](http://kapelner.com/kapelner/grades). You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.
+
 ## Lecture Schedule Changes
 
 Tues, Sept 23 9:15AM - noon in Kiely 270. No class Thurs, Oct 9 and Thurs, Oct 16.
