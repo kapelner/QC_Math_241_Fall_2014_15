@@ -14,7 +14,7 @@
 
 \title{MATH 241 Fall 2014 Homework \#3}
 
-\author{Professor Adam Kapelner}
+\author{Professor Adam Kapelner} %STUDENTS: DELETE my name and put your name and section here
 
 \iftoggle{professormode}{
 \date{Due 5PM in my office, Tues Sept 23, 2014 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
@@ -29,6 +29,8 @@
 \begin{document}
 \maketitle
 
+
+
 \iftoggle{professormode}{
 \begin{abstract}
 Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \ingreen{I want you to work on this in groups.} %As 8x Mr. Olympia bodybuilder Ronnie Coleman says, \qu{everyone wants to be a bodybuilding, no one wants to lift no heavy @\$\#\%\$ weights.}
@@ -39,15 +41,18 @@ The problems below are color coded: \ingreen{green} problems are considered \tex
 
 This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. After three days, it will receive a zero because I will hand out the solutions. 
 
-15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and place to put your name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures.
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours ad write your section.  If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures.
 
-The document is available with spaces for you to write your answers. You are free to handwrite on separate paper if you wish but I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. On the following page, write your name and section: section A is 9:15AM--10:30AM and section B is 12:15PM-1:30PM.
-\pagebreak
+The document is available with spaces for you to write your answers. You are free to handwrite on separate paper if you wish but I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. Write your name and section below. Section A is 9:15AM--10:30AM and section B is 12:15PM-1:30PM.
+
 \end{abstract}
+
+\thispagestyle{empty}
+\vspace{2cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
 }
 
-NAME: \line(1,0){275} ~~SECTION (A or B): \line(1,0){40}
-% NAME: John Doe ~~Section: A %%%STUDENTS: uncomment this line, add your name and section and then delete the line above
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %BEGIN PROBLEMS
@@ -70,7 +75,7 @@ NAME: \line(1,0){275} ~~SECTION (A or B): \line(1,0){40}
 
 
 \begin{enumerate}
-\easysubproblem After the break shot, miraculously, all of the balls except one goes into each of the 6 pockets and you are left with one ball you need to pocket to win. Assuming each pocket is distinct but the 15 target balls are indistinct, how many ways is there to win? That is, how many configurations of balls in holes are there after the last ball has been sunk? \spc{3}
+\easysubproblem After the break shot, miraculously, all of the balls except one goes into each of the 6 pockets and you are left with one ball you need to pocket to win. Assuming each pocket is distinct but the 15 target balls are indistinct, how many ways is there to win? That is, how many configurations of balls in holes are there to sink this last ball? \spc{3}
 
 \easysubproblem On your second game, you sink no balls on the break shot. How many ways is there to win if you assume at least one ball goes into each hole? \spc{3}
 
@@ -150,7 +155,7 @@ The gambler can make bets on any of the spaces as well as red, black, green, an 
 
 \easysubproblem What are the \textit{odds} he winds up on any floor between 1 through 77? Interpret \qu{odds} to mean what it usually means: \textit{odds against}.  \spc{4}
 
-\intermediatesubproblem Let's say the businessman does this straight for four weeks, five days per week. What is the probability he winds up on floor 32 every business trip?  \spc{3}
+\intermediatesubproblem [OPTIONAL] Let's say the businessman does this straight for four weeks, five days per week. What is the probability he winds up on floor 32 every business trip?  \spc{3}
 
 \extracreditsubproblem In one week, the businessman was on floor 12, 15 18, 32 and 59. What is the probability he visited One World Trade Center for more than one of those days?  \spc{6}
 
@@ -189,17 +194,5 @@ The gambler can make bets on any of the spaces as well as red, black, green, an 
 
 \end{enumerate}
 
-\problem  You play a game with your friend. You both roll a die. Whoever rolls higher wins. If you roll the same number, you tie.
-
-\begin{enumerate}
-\easysubproblem What is the probability you tie?  \spc{1}
-
-\intermediatesubproblem What is the probability you win? Draw a tree to figure this out. The first branch is the numerical value of your roll, the second branch is whether you Win (W), Tie (T) or Lose (L).  \spc{8}
-
-\intermediatesubproblem Imagine upon ties, the game continues, and you both roll again. You play until someone has a higher roll than the other. What is the probability you win this game? Use the algebraic trick we talked about in class.  \spc{6}
-
-\extracreditsubproblem What are fair odds on a game where your friend automatically wins if you both tie on rolling a 1?  \spc{6}
-
-\end{enumerate}
 
 \end{document}
