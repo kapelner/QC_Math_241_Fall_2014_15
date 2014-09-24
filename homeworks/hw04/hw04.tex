@@ -35,11 +35,11 @@ Once again, the path to success in this class is to do many problems. Unlike oth
 
 Reading is still \textit{required}. For this homework set, please read the conditional probability section of Chapter 1 of Hogg, Tanis and Zimmerman (H, T \& Z) as well as the random variables section of Chapter 2.
 
-The problems below are color coded: \ingreen{green} problems are considered \textit{easy}; \inorange{yellow} problems are considered \textit{intermediate}, \inred{red} problems are considered \textit{difficult}; and \inpurple{purple} problems are for \textit{extra credit} which are also marked \qu{[E.C.].} The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}; and \inpurple{purple} problems are for \textit{extra credit} which are also marked \qu{[E.C.].} The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
 
-This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. After three days, it will receive a zero because I will hand out the solutions. 
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. %After 3 days, it will receive a 0 because I will hand out the solutions. 
 
-15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing.
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
 
 The document is available with spaces for you to write your answers. You are free to handwrite on separate paper if you wish but I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
 
@@ -106,6 +106,10 @@ NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
 
 \end{enumerate}
 
+\iftoggle{professormode}{
+\paragraph{Random Varibles} We now begin question about the second unit of this class: r.v.'s. \\ \\
+}
+
 \problem In this problem, you use coins to create randomness. Your goal is to design a random variable $X$ which is distributed in the following way:
 
 \beqn
@@ -143,7 +147,7 @@ X \sim \begin{cases}
 
 \extracreditsubproblem Design a coin flipping system which yields $p=\fifth$. \spc{8}
 
-\extracreditsubproblem Prove or disprove that you can design a coin flipping system which yields an arbitrary $p \in \rationals \cap \zeroonecl$. Disclaimer: I tried this problem for a half hour and could not solve it. \spc{3.5}
+\extracreditsubproblem Prove or disprove that you can design a coin flipping system which yields an arbitrary $p \in \rationals \cap \zeroonecl$. Disclaimer: I tried this problem for a half hour and could not solve it. \spc{4.5}
 
 \end{enumerate}
 
@@ -158,21 +162,87 @@ X \sim \begin{cases}
 }
 
 \begin{enumerate}
-\easysubproblem In the previous problem, you used coins to design the random variable $X \sim \bernoulli{\half}$ using the $\Omega$ from coin(s) flips. Describe four other scenarios or devices that produce their own $\Omega$'s that also result in  $X \sim \bernoulli{\half}$. I will give you the first scenario for free: roll a die and map outcomes 1,2,3 to 0 and outcomes 4,5,6 to 1. This works because 
+\easysubproblem In the previous problem, you used coins to design the random variable $X \sim \bernoulli{\half}$ using the $\Omega$ from a coin flip. There are other ways to create $X$. For instance: roll a die and map outcomes 1,2,3 to 0 and outcomes 4,5,6 to 1. This works because 
 
 \beqn
-&&\prob{X=0} = \prob{\omega : X(\omega) = 0} = \prob{\braces{1} \cup \braces{2} \cup \braces{3}} = 1/2 ~~\text{and} \\ 
-&&\prob{X=1} = \prob{\omega : X(\omega) = 1} = \prob{\braces{4} \cup \braces{5} \cup \braces{6}} = 1/2.
+&&\prob{X=0} = \prob{\braces{\omega : X(\omega) = 0}} = \prob{\braces{1} \cup \braces{2} \cup \braces{3}} = 1/2 ~~\text{and} \\ 
+&&\prob{X=1} = \prob{\braces{\omega : X(\omega) = 1}} = \prob{\braces{4} \cup \braces{5} \cup \braces{6}} = 1/2.
 \eeqn \spc{6}
 
-\intermediatesubproblem We talked about in class how the sample space no longer needs to be considered once the random variable is described. Why? Use your answer to (a) to inspire this answer. Write it \textit{in English} below. \spc{6}
+Describe three other scenarios or devices that produce their own $\Omega$'s that also result in $X \sim \bernoulli{\half}$ \spc{6}
+
+\intermediatesubproblem We talked about in class how the sample space no longer needs to be considered once the random variable is described. Why? Use your answer to (a) to inspire this answer. Write it \textit{in English} below. \spc{5}
 
 \hardsubproblem Back to philosophy... Let's say $X$ models the price difference that IBM stock moves in one day of trading. For instance, if the stock closed yesterday at \$56.24 and today it closed at \$57.24, the random variable would be \$1 for today. According to our definition of a random variable, there is a sample space with outcomes being drawn ($\omega \in \Omega$) that is \qu{controlling} the value of $X$. Describe it the best you can \textit{in English}. There are no right or wrong answers here, but your answer must be coherent and demonstrate you understand the question. \spc{6}
 
 \end{enumerate}
 
-\iftoggle{professormode}{
-\paragraph{NEXT SECTION} NEXT SECTION GOES HERE
-}
- 
+\problem We will now study probability mass functions (PMF's) denoted as $f(x)$ and cumulative distribution functions (CDF's) denoted as $F(X)$ and review the r.v.'s we did in class.
+
+\begin{enumerate}
+\easysubproblem Draw the PMF for $X \sim \bernoulli{\half}$.  \spc{4}
+
+\easysubproblem Draw the PMF for $X \sim \bernoulli{p}$.  \spc{4}
+
+\easysubproblem Draw the CDF for $X \sim \uniformdiscrete{1,3,4,9}$.  \spc{6}
+
+\easysubproblem Using the r.v. from the previous question, what is $\prob{X \in (3,9)}$? \spc{3}
+
+\easysubproblem Take a r.v. $X$ with $\support{X} = \zeroonecl$. Is this a \qu{discrete r.v.?} Explain. \spc{1.5}
+
+\hardsubproblem In class we defined the Bernoulli r.v. as:
+
+\beqn
+X \sim \begin{cases}
+1 \withprob p \\
+0 \withprob 1-p
+\end{cases}
+\eeqn
+
+but we did not put its PMF on the board. Write $f(x)$ for $X \sim \bernoulli{p}$ that is only valid on $\support{X}$. \spc{3}
+
+
+\extracreditsubproblem Write a PMF for $X \sim \bernoulli{p}$ that is valid always $\forall x \in \reals$.  \spc{3}
+
+\hardsubproblem Sometimes knowing the $\Omega$ matters a little bit. Let's say $X_1 \sim \bernoulli{\half}$ is generated from one coin and $X_2 \sim \bernoulli{\half}$ is generated from another coin independently tossed. Create a new r.v. $T = X_1 + X_2$. Describe its PMF using the $\sim$ notation like in the previous problem. \spc{8}
+
+\hardsubproblem It may seem to you that we use $F$ for CDF and $f$ for PMF because there's a connection to derivatives and anti-derivatives. We are going to see if this is true here? Consider the PMF we discussed for $X \sim \bernoulli{\half}$. Does $\myint{x}{}{}{f(x)} = F(x) + C$ where the constant $C \in \reals$? Explain. \spc{4}
+
+\hardsubproblem How about the opposite? Consider the CDF we discussed for $X \sim \bernoulli{\half}$. Does $\text{d} / \text{d}x[F(x)] = f(x)$? Explain. \spc{4}
+
+\end{enumerate}
+
+\problem We now combine the concept of recursing trees with random variables. This r.v. is called the geometric r.v. and will not be tested on the upcoming midterm. I do expect you to be able to do this type of reasoning on the midterm though.
+
+Imagine you play a game. You flip a coin with the probability of heads is not necessarily fair. Define $p := \prob{\braces{H}}$. If you get heads, you stop. If you get tails, you keep flipping. 
+
+\begin{enumerate}
+\easysubproblem How many flips of the coins can you potentially flip? Describe the set of number of flips that could occur. Use the notation from lecture 1. \spc{2}
+
+\easysubproblem What is the probability you flip three times? That is two tails and a head.\spc{3}
+
+\intermediatesubproblem What is the probability you flip $x$ times? \spc{3}
+
+\easysubproblem Let $X$ be the r.v. that models the number of flips. What is the $\support{X}$? Is it finite? \spc{2}
+
+\easysubproblem What is the parameter space for $p$? \spc{3}
+
+\hardsubproblem Find the PMF for $X$. This PMF only has to be valid $\forall x \in  \support{X}$. \spc{4}
+
+
+\hardsubproblem Find the CDF for $X$. \spc{4}
+
+\intermediatesubproblem In class we spoke about the two properties of PMFs. The first property is that $f(x) \in \zeroonecl$. Show that this is true $\forall x \in  \support{X}$ for this r.v.  \spc{5}
+
+\hardsubproblem In class we spoke about the two properties of PMFs. The second property is that
+
+\beqn
+\sum_{x \in  \support{X}} f(x) = 1
+\eeqn
+
+which is similar to the concept in probability of $\prob{\Omega} = 1$. Show that this holds for this r.v. \spc{6}
+
+\easysubproblem In class we spoke a lot about \qu{successes} and \qu{failures.} In English, explain the resulting outcomes of this random variable using the words \qu{successes} and \qu{failures.}
+\end{enumerate}
+
 \end{document}

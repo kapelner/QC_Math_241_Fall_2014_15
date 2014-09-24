@@ -351,6 +351,7 @@
 \newcommand{\se}[1]{\text{SE}\bracks{#1}}
 \newcommand{\seest}[1]{\hat{\text{SE}}\bracks{#1}}
 \newcommand{\bias}[1]{\text{Bias}\bracks{#1}}
+\newcommand{\derivop}[2]{\dfrac{\text{d}}{\text{d} #1}\bracks{#2}}
 \newcommand{\partialop}[2]{\dfrac{\partial}{\partial #1}\bracks{#2}}
 \newcommand{\secpartialop}[2]{\dfrac{\partial^2}{\partial #1^2}\bracks{#2}}
 \newcommand{\mixpartialop}[3]{\dfrac{\partial^2}{\partial #1 \partial #2}\bracks{#3}}
@@ -393,6 +394,7 @@
 \newcommand{\normnot}[2]{\mathcal{N}\parens{#1,\,#2}}
 \newcommand{\classicnormnot}{\normnot{\mu}{\sigsq}}
 \newcommand{\stdnormnot}{\normnot{0}{1}}
+\newcommand{\uniformdiscrete}[1]{\mathrm{Uniform}\parens{\braces{#1}}}
 \newcommand{\uniform}[2]{\mathrm{U}\parens{#1,\,#2}}
 \newcommand{\stduniform}{\uniform{0}{1}}
 \newcommand{\exponential}[1]{\mathrm{Exp}\parens{#1}}
@@ -475,10 +477,10 @@
 %%% problem typesetting
 \newcommand{\problem}{\noindent \colorbox{black}{{\color{yellow} \large{\textsf{\textbf{Problem \arabic{probnum}}}}~}} \addtocounter{probnum}{1} \vspace{0.2cm} \\ }
 
-\newcommand{\easysubproblem}{\ingreen{\item}}
-\newcommand{\intermediatesubproblem}{\inorange{\item}}
-\newcommand{\hardsubproblem}{\inred{\item}}
+\newcommand{\easysubproblem}{\ingreen{\item} [easy] }
+\newcommand{\intermediatesubproblem}{\inorange{\item} [harder] }
+\newcommand{\hardsubproblem}{\inred{\item} [difficult] }
 \newcommand{\extracreditsubproblem}{\inpurple{\item} [E.C.] }
 \renewcommand{\labelenumi}{(\alph{enumi})}
 
-
+\newcommand{\support}[1]{\text{Supp}\parens{#1}}
