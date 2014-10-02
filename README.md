@@ -8,7 +8,7 @@ You can check your grades in realtime [here](http://kapelner.com/kapelner/grades
 
 ## Lecture Schedule Changes
 
-Tues, Sept 23 9:15AM - noon in Kiely 270. No class Thurs, Oct 9 and Thurs, Oct 16.
+No class Thurs, Oct 9 and Thurs, Oct 16.
 
 ## Homeworks
 
@@ -20,13 +20,14 @@ Tues, Sept 23 9:15AM - noon in Kiely 270. No class Thurs, Oct 9 and Thurs, Oct 1
 
 ## Exams
 
-* Midterm I - Thursday, October 2 (in class)
-* Midterm II - Thursday, November 13 (in class)
-* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA
+* Midterm I - Thursday, October 2 (in class). Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true).
+* Midterm II - Thursday, November 13 (in class).
+* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA.
 
 ## Office Hours
 
-Time: Tues 10:30--11AM, 1:45--2:15PM, Thurs 10:30-11AM
+I *want* you to come to office hours!
 
+Time: Tues 10:30--11AM and 1:45--2:15PM, Thurs 10:30-11AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
