@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{MATH 241 Fall 2014 Homework \#5}
+
+\author{Professor Adam Kapelner} %STUDENTS: DELETE my name and put your name and section here
+
+\iftoggle{professormode}{
+\date{Due 5PM in my office, Tues Oct 14, 2014 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \ingreen{I want you to work on this in groups.} This one is a short workout. %As 8x Mr. Olympia bodybuilder Ronnie Coleman says, \qu{everyone wants to be a bodybuilding, no one wants to lift no heavy @\$\#\%\$ weights.}
+
+Reading is still \textit{required}. For this homework set, please read the hypergeometric variable section of Chapter 2.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}; and \inpurple{purple} problems are for \textit{extra credit} which are also marked \qu{[E.C.].} The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. %After 3 days, it will receive a 0 because I will hand out the solutions. 
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. You are free to handwrite on separate paper if you wish but I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%BEGIN PROBLEMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\iftoggle{professormode}{
+\paragraph{Hypergeometric Distribution} Since we haven't covered much else, this majority of this assignment will be about this distribution.\\ \\
+} 
+
+\problem The hypergeometric is sampling \qu{without replacement.} Imagine you have this bag of marbles with 37 marbles and 17 of them are black. We will define a \qu{success} as drawing a black marble.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{marble.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem Let's say you draw one marble. Call this r.v. $X$. Is it hypergeometric?
+
+\easysubproblem The hypergeometric distribution has three parameters. What are the parameters for $X$? \spc{2}
+
+\easysubproblem Write, but do not draw, the PDF, $f(x)$ for the r.v. $X$ where $x$ is the number of successes. \spc{2}
+
+\easysubproblem What is the support of this r.v.? \spc{2}
+
+\intermediatesubproblem There is another variable we learned about in class with this same support. Show that $X$ is distributed as this type of r.v. and find its parameter(s). \spc{2}
+
+\easysubproblem Now imagine you draw 4 marbles without replacement. Call this r.v. $X$ (and forget about the previous r.v. $X$). How is $X$ distributed? Use the notation in class and find its parameters. \spc{2}
+
+\easysubproblem What is the support of $X$? \spc{2}
+
+\easysubproblem Write, but do not draw, the PMF of $X$. \spc{3}
+
+\easysubproblem Draw the PMF of $X$. \spc{6}
+
+\easysubproblem Draw the CDF of $X$. \spc{6}
+
+\easysubproblem What is the probability of getting 4 successes in a row? Use the PMF. \spc{3}
+
+\easysubproblem What is the probability of getting 4 successes in a row? Use conditional probability. This should yield the same answer. \spc{3}
+
+\easysubproblem Now imagine you draw 47 marbles without replacement. Call this r.v. $X$ (and forget about the previous r.v. $X$). How is $X$ distributed? Use the notation in class and find its parameters. \spc{2}
+
+\easysubproblem What is the support of $X$? Why is $0 \notin \support{X}$? \spc{4}
+
+\easysubproblem Write, but do not draw, the PMF of $X$. \spc{3}
+
+\hardsubproblem Find the mode of this distribution. \qu{Mode} is defined as the most likely outcome result. \spc{4}
+
+\extracreditsubproblem Why is this distribution called \qu{hypergeometric?} Supposedly Euler came up with the word. But why is it called this? Is it related to the geometric distribution? This is easy extra points for those who are good with Google and have a soft spot for history. \spc{6}
+
+\end{enumerate}
+\pagebreak
+\problem Generally, the hypergeometric has three parameters. We will solve for its support here under several disjoint conditions and then in class we will generalize it. Call $X$ a hypergeometric r.v. with all its parameters free - meaning they can take on any value, so you $n,~K,~N$ in your answers.
+
+\begin{enumerate}
+\easysubproblem Using the usual parameterization of the hypergeometric, descrive the parameter space. You need to say what sets each of the parameters \qu{lives} in. \spc{4}
+
+\easysubproblem Write, but do not draw, the PMF of $X$. \spc{3}
+
+\intermediatesubproblem $x$ is the free variable in $f(x)$ which you wrote in (b) and it designates the number of successes. Show that successes and failure are essentiall the same thing by finding $f(n-x)$ and replacing $K$ with $N-K$. What does this teach you? \spc{3}
+
+\intermediatesubproblem Let's say $n \leq K$ and $n \leq N-K$. What is the support of $X$ in this situation? \spc{4}
+
+\intermediatesubproblem Let's say $n \leq K$ and $n > N-K$. What is the support of $X$ in this situation? \spc{4}
+
+\intermediatesubproblem Let's say $n > K$ and $n \leq N-K$. What is the support of $X$ in this situation? \spc{4}
+ 
+\hardsubproblem Let's say $n > K$ and $n > N-K$. What is the support of $X$ in this situation? \spc{4}
+
+
+\end{enumerate}
+
+\problem We will look at hypergeometric distributions with large $N$. If $N$ is really large, sampling without replacement can be approximated by sampling with replacement. In the limit, it is sampling with replacement.
+
+\begin{enumerate}
+\easysubproblem Imagine a bag of 1,000 marbles with 500 black marbles where black signifies success once again. You draw 3 marbles without replacement. What is the probability of getting all successes? Use the PMF of a hypergeometric distribution you create. \spc{3}
+
+\easysubproblem Now draw 3 marbles with replacement. What is the probability you get all successes? \spc{3} 
+
+\easysubproblem Calculate the percent difference in the answer you got in (a) and the answer you got in (b). Why is it small? \spc{3}
+
+\extracreditsubproblem Derive a function of $N$ and $n$ which gives this percentage difference for $N$ and $n$ generally when the number of successes $K = \half N$. \spc{7}
+
+\easysubproblem We will now begin deriving the binomial in pieces. Parameterize a hypergeometric by setting $K = pN$. What is the parameter space for $p$? \spc{2}
+
+\easysubproblem Write the PMF $f(x)$ for this r.v. using the $p$ parameterization using $x$ as the free variable. \spc{3}
+
+\easysubproblem What limit do we take and why are we taking this limit? \spc{3}
+
+\easysubproblem Rewrite the PMF without choose notation using only factorials and simplify the fraction by moving the factorial terms from denominator, $\binom{N}{n}$, to the numerator. \spc{4}
+
+\easysubproblem Which three terms can you factor out from the limit expression? Show that they are equivalent to $\binom{n}{x}$. \spc{7}
+
+\hardsubproblem Within the limit, you now have three ratios. Write these ratios by canceling out the common terms. For instance $10!/6! = 10 \times 9 \times 8 \times 7$ and $6!/10! = 1 / (10 \times 9 \times 8 \times 7)$. This is difficult because you have to get the indexing right.  \spc{6}
+
+\intermediatesubproblem How many terms are in the numerator? How many terms are in the denominator.  \spc{2}
+
+\intermediatesubproblem Reason in English that the denominator looks like a bunch of $N - c_i$ where the $c_i$'s are all constants which are negligible as $N \rightarrow \infty$. \spc{3}
+
+\intermediatesubproblem Reason in English that the numerator looks like a bunch of $Np - c_i$ where the $c_i$'s are all constants which are negligible as $N \rightarrow \infty$ as well as a bunch of $N(1-p) - c_i$ where the $c_i$'s are all constants which are negligible as $N \rightarrow \infty$.  \spc{3}
+
+\intermediatesubproblem Match each $Np - c_i$ term in the numerator to one $N - c_i$ term in the denominator and take the limit of each one individually. Show that you wind up with $p \times p \times \ldots$ for a total of $x$ times, i.e. $p^x$. \spc{4}
+
+\intermediatesubproblem Match each $N(1-p) - c_i$ term in the numerator to one $N - c_i$ term in the denominator and take the limit of each one individually. Show that you wind up with  $(1-p) \times (1-p) \times \ldots$ for a total of $n-x$ times, i.e. $ \tothepow{1-p}{n-x}$. \spc{4}
+
+\easysubproblem Using your answers from parts (i), (n) and (o) write the binomial r.v.'s PMF. \spc{2}
+
+\easysubproblem What is the support of this binomial r.v. you just derived? \spc{2}
+
+\intermediatesubproblem What is a binomial r.v.? Use your own words. \spc{5}
+
+\end{enumerate}
+\end{document}
