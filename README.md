@@ -12,6 +12,7 @@ No class Thurs, Oct 9 and Thurs, Oct 16.
 
 ## Homeworks
 
+* Homework 6 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw06/hw06.pdf?raw=true).
 * Homework 5 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw05/hw05.pdf?raw=true).
 * Homework 4 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw04/hw04.pdf?raw=true).
 * Homework 3 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw03/hw03.pdf?raw=true).
