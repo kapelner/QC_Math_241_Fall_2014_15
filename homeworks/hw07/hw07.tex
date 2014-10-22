@@ -1,0 +1,430 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+\title{MATH 241 Fall 2014 Homework \#7}
+
+\author{Professor Adam Kapelner} % STUDENTS: DELETE my name and put your name and section here e.g. \author{John Doe, Section A}. MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
+
+\iftoggle{professormode}{
+\date{Due 5PM in my office, Tues Oct 28, 2014 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, please read the binomial, negative binomial variable, Poisson and expectation section of Chapter 2. Avoid the parts that deal with \qu{moment generating functions.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}; and \inpurple{purple} problems are for \textit{extra credit} which are also marked \qu{[E.C.].} The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day.
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You may also use \url{writelatex.com} which is a web service (you don't have to install or configure anything on your local computer). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. I STRONGLY recommend to write on a printout of this document since you will always have the questions handy to study from (and it is easier for me to grade accurately). Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%BEGIN PROBLEMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\iftoggle{professormode}{
+\paragraph{Review} Everyone needs more practice with the r.v.'s we've been studying. \\ \\
+} 
+
+\problem We will do a few short questions asking which r.v. to use and why. We will be investigating this by imagining a trip the grocery store to buy ingredients for guacamole.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{avocados.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem You buy an avocado at the grocery store which is mushy. Thus, it may have brown inside because it's partially rotten. Call this probability of rottenness $p$. Model the number of good avocados you have using a random variable. Call this r.v. $X$. Hint: the number of good avocadoes is either zero or one since you buy one and if it's good, you have one; if it's bad you have zero. All you need to write is $X \sim$ something. You do not need to write the PMF, draw the PMF, draw the CDF, nor contemplate the meaning of life in the next centimeter of white space. \spc{1}
+
+\easysubproblem You buy 10 such mushy avocadoes. Assume the draws of avocadoes are independent. Model the number of good avocados you have using a random variable. Call this r.v. $X$. \spc{1}
+
+\easysubproblem Write the PMF for the r.v. you created in (b). \spc{1}
+
+\easysubproblem Write the support for the r.v. you created in (b).  \spc{1}
+
+\easysubproblem Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you get 3, 4, 5 or 6 good avocados. Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  \spc{2}
+
+\easysubproblem Now you do another activity. You take one avocado, cut it open and see if it's rotten. You keep doing this until you see a rotten avocado. Model the number of avocados you cut open using a r.v. Call this r.v. $X$.  \spc{1}
+
+\easysubproblem Write the PMF for the r.v. you created in (f).  \spc{1}
+
+\easysubproblem Write the support for the r.v. you created in (f).  \spc{1}
+
+\easysubproblem What is the probability you stop when looking at the third avocado?  \spc{1}
+
+\easysubproblem Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you stop between 4 and 37 avocados (including 4 and including 37). Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  \spc{2}
+
+\easysubproblem Now we keep picking avocados and are waiting until we get 4 rotten ones. Model the number of avocados you cut open using a r.v. Call this r.v. $X$.  \spc{1}
+
+\easysubproblem Write the PMF for the r.v. you created in (k).  \spc{1}
+
+\easysubproblem Write the support for the r.v. you created in (k).  \spc{1}
+
+\easysubproblem What is the probability you stop when looking at the seventh avocado?  \spc{1}
+
+\easysubproblem What is the probability you stop when looking at the second avocado? If this probability is zero, comment on why this is impossible.  \spc{2}
+
+\easysubproblem Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you stop after 8 avocados (not including 8). Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  \spc{2}
+
+\easysubproblem Comment on why the r.v. you created in (b) is the sum of many $\iid$ r.v.'s you modeled in (a).  \spc{3}
+
+\easysubproblem Comment on why the r.v. you created in (k)  is the sum of many $\iid$ r.v.'s you modeled in (f).  \spc{3}
+
+\intermediatesubproblem Let's say you learned how to detect rotten avocadoes and you used this learning to select new avocados. What assumption is violated?  \spc{2}
+
+\intermediatesubproblem Let's say there were two baskets of avocados at the grocery store. The first basket comes from California-grown avocados and the second basket comes from Mexican-grown avocados. At some point in your picking of avocados you move from one basket to the other. What assumption is violated now?  \spc{2}
+
+\intermediatesubproblem If either (s) or (t) occurs, are any answers in your solutions to questions (b) - (r) correct?  \spc{2}
+
+\end{enumerate}
+
+\problem A big problem is verifying that the PMF's add up to one over the support.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{sums.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem $X \sim \bernoulli{p}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. \spc{2}
+
+\hardsubproblem $X \sim \binomial{n}{p}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. Use the trick from the class notes or something you demonstrated in a previous homework assignment. You do not need to write more than a couple sentences.  \spc{3}
+
+\hardsubproblem $X \sim \geometric{p}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. Use the proof in the class notes. No need to prove when the geometric series converges. Just write a comment about it.  \spc{6}
+
+\extracreditsubproblem $X \sim \negbin{r}{p}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. Hard but googlable. \spc{9}
+
+\extracreditsubproblem $X \sim \hypergeometric{n}{K}{N}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. I believe this must be done in cases.  \spc{10}
+
+\extracreditsubproblem $X \sim \poisson{\lambda}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. The answer is in the last page of my scanned lecture PDF on github. We didn't get time to cover it in class, hence it will not be covered on any exams.  \spc{10}
+
+\end{enumerate}
+
+
+\iftoggle{professormode}{
+\paragraph{The Poisson} We will be studying this r.v. now.\\ \\
+} 
+
+\problem We will be investigating the situation where there are $n=1500$ students who are Math, Economics, Accounting, Math Education and CS majors at Queens College Sophomore level and above. Assume these students qualify to take Math 241 given by yours truly. 
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\fbox{\includegraphics[width=7in]{241.png}}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem Assume each student is ruggedly individualistic about their choice of classes. What assumption is this? One word is good. \spc{1.5}
+
+\easysubproblem Assume each students has the same interest level in Probability and Statistics. What assumption is this? One word is good. \spc{1.5}
+
+\easysubproblem The assumptions in (a) and (b) combine into which necessary assumption for using the binomial r.v. to model the number of students? One acronym is good. \spc{1.5}
+
+\easysubproblem Assume the probability they enroll in my Math 241 is $p=2\%$. Calculate the probability of 30 students enrolling in my Math 241 \textit{exactly}. Do not use an approximation. This is the expected number of students to enroll (i.e. 1500 $\times$ 2\% = 30). \spc{2}
+
+\easysubproblem This is a case where $n$ is high and $p$ is low. Let $U$ be the r.v. that models the approximation we learned about in class. How is $U$ distributed? Indicate your parameters clearly. \spc{2}
+
+\easysubproblem The \texttt{R} code below will graph the PMF of $X \sim \binomial{1500}{2\%}$ in \inred{red} and the PMF of $U$ in \ingreen{green.} Copy and paste the code into the console. If this doesn't work, download the PDF, open it with Adobe PDF reader and try again. I've tested this on Windows, MAC and Linux and it works on all three.
+
+\begin{knitrout}
+\begin{kframe}
+\begin{verbatim}
+n = 1500; 
+p = 0.02; 
+support_max = 300; 
+bin = array(NA, support_max); 
+pois = array(NA, support_max); 
+for (i in 1 : support_max){
+  bin[i] = dbinom(i, n, p); 
+  pois[i] = dpois(i, n * p); 
+}
+plot(bin[1:60],
+  pch = 16, 
+  col = "red", 
+  xlab = "Number of students enrolled in Math 241", 
+  ylab = "probability", 
+  main = "Class Enrollment Probabilities for Math 241"); 
+points(pois[1:60], col = "green", pch = 16);
+#placeholder for last line
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Is $U$ a good approximation of $X$? Determine visually from the plot as to why or why not? Print out the plot and attach it to your homework.  \spc{6}
+
+
+\end{enumerate}
+
+\problem We will be deriving the Poisson PMF from the ground up using the class notes.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{poisson.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem What is the Poisson r.v.? Write a paragraph in your own words describing it.  \spc{4}
+
+\easysubproblem Use $\lambda = np$ to pin the relationship of $n \times p$. What limit do we take on $n$? What limit do we take on $p$?  \spc{2}
+
+\easysubproblem We need a limit to respect the relationship of $\lambda = np$. Use $n \rightarrow \infty$ for now and set $p = \lambda / n$. Write the PMF of the binomial using this substitution for $p$.  \spc{3}
+
+\easysubproblem Use your answer from (c), place the limit notation in front. Why are we taking this limit?  \spc{3}
+
+\easysubproblem Now, break open the combination term and the $\tothepow{\lambda / n}{x}$ term into atomic parts. Anything that is not a function of $n$ factor out and write it in front of the limit operator.  \spc{3}
+
+\intermediatesubproblem Now expand the $n! / (n-x)!$ term into many terms using the $\ldots$ notation. How many of these terms are there?  \spc{2}
+
+\easysubproblem Expand the $n^x$ term into many terms. How many terms are there?  \spc{2}
+
+\intermediatesubproblem Match the first term from (f) with the first term from (g). Match the second term from (f) with the second term from (g), etc through all the terms in (f) and (g). Take the limit of each of these terms.  \spc{5}
+
+\easysubproblem Now expand the $\tothepow{1 - \lambda/n}{n-x}$ into two terms.  \spc{2}
+
+\intermediatesubproblem Take the limit of the $\tothepow{1 - \lambda/n}{-x}$ term. Do so carefully in stages.  \spc{2}
+
+\intermediatesubproblem Using the fact that we derived in class, that $e^c = \limitn \tothepow{1 + c/n}{n}$, solve for the limit of the $\tothepow{1 - \lambda/n}{n}$ term.  \spc{2}
+
+\easysubproblem Combine your answers to parts (e), (h), (j) and (k) and write the PMF for the r.v. $X \sim \poisson{\lambda}$ below.  \spc{2}
+
+\intermediatesubproblem What is the support of $X$?  \spc{2}
+
+\intermediatesubproblem What is the paramter space of $\lambda$?  \spc{2}
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\problem Imagine two Bernoulli r.v.'s $X_1$ and $X_2$ which model two fair coin flips where Heads is mapped to 1 and tails is mapped to 0. The probability of heads is 1/2.
+
+\begin{enumerate}
+
+\easysubproblem Given no other information, explain using the definition of r.v. independence why these two r.v.'s are independent. \spc{3}
+
+\easysubproblem Given no other information, explain using the definition of equality in distribution why $X_1 \equalsindist X_2$. \spc{3}
+
+\easysubproblem Are $X_1, X_2 \iid \bernoulli{p}$? \spc{1}
+
+\intermediatesubproblem Now imagine these two coins were linked using some sort of sorcery. They are flipped at the same time but are guaranteed to flip the same way. That is, if the first coin goes heads, the second coin must go heads (and if the first coin goes tails, the second coin must go tails).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.8in]{magiccoins.png}
+\end{figure}
+\FloatBarrier
+}
+
+Explain using the definition of r.v. independence why these two r.v.'s are \textit{dependent}. \spc{3}
+
+\intermediatesubproblem Using the same two sorcery-controlled coins, explain using the definition of equality in distribution why or why not $X_1 \equalsindist X_2$. \spc{3}
+
+
+\easysubproblem Are $X_1, X_2 \iid \bernoulli{p}$ if they are modeled by these two sorcery-controlled coins? \spc{0.3}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{The Binomial Distribution} This is one of the most useful distributions on the planet, so it pays to put in time to practice using it.\\ \\
+} 
+
+\problem Imagine you are flipping the same bundle of coins from the midterm. The probability of the coin bundle landing on its side is $\prob{S} = 1/11$. Let's call landing on its side a \qu{success.}
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.5in]{coins.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem I flip the coin bundle once. Model a success as a \qu{1.} Show that the r.v. modeling this event outcome is Bernoulli and define its parameter.  \spc{2}
+
+\easysubproblem Show that this event outcome can also be modeled by a Binomial and define its parameters.  \spc{2}
+
+\easysubproblem Let's say we flip 10 times. What is the probability that we get one (and only one) success?  \spc{3}
+
+\easysubproblem Let's say we flip 10 times. What is the probability that we get 5 (and only 5) successes? \spc{3}
+
+\easysubproblem Let's say we flip 10 times. What is the probability that we get 8 (and only 8) successes? \spc{3}
+
+\intermediatesubproblem Let's say we flip 10 times. What is the probability we get one or two successes? \spc{3}
+
+\hardsubproblem Let's say we flip 10 times. What is the probability we get 3 or less successes? That is, solve for $\prob{X \leq 3} = F(3)$. \spc{3}
+
+\end{enumerate}
+
+\problem Imagine you are playing roulette again this time in America. The probability of winning a bet on black is 18/38. Call this a \qu{success.}
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{roulette.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem Let's say we spin 15 times. What is the probability that we get 10 successes? \spc{3}
+
+\intermediatesubproblem Let's say we spin 30 times. Write a summation expression for getting 15 or more successes. Do not compute the answer explicitly. \spc{3}
+
+\hardsubproblem Preview of statistics. You are now the casino floor manager for roulette. You witness 40 spins and it comes out black 18 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  \spc{5}
+
+\hardsubproblem You witness 40 spins and it comes out black 38 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  \spc{5}
+
+\extracreditsubproblem You witness 40 spins. How many times should black occur \qu{normally?} At which large values of number of blacks do get concerned by? At which small values of number of blacks do you get concerned by?  \spc{7}
+
+\end{enumerate}
+
+
+\problem We will now look at the binomial in general.
+
+\begin{enumerate}
+
+\easysubproblem Show that success and failure is arbitrary by letting the number of successes $x$ equal the number of failures $n-x$ and the probability of success $p$ equals the probability of failure $1-p$ using the PMF of the binomial distribution. This is similar to last homework where we illustrated the same fact for the hypergeometric distribution.  \spc{3}
+
+\intermediatesubproblem Show using the definition of equals in distribution that $X_1 \equalsindist X_2$ if $X_1 \sim \bernoulli{p}$ and $X_2 \sim \binomial{1}{p}$.  \spc{3}
+
+\hardsubproblem Let $X_1, X_2, X_3, X_4 \iid \bernoulli{p}$ and $T_4 = \sum_{i=1}^4 X_i$. Use a tree structure like we did in class to show that $\prob{T_4 = 2} = \binom{4}{2}p^2 (1-p)^2$. \spc{11}
+
+\easysubproblem In (c) explain why you need the $\binom{4}{2}$ term \textit{in English}. \spc{4}
+
+\easysubproblem In (c) explain what the function of the $p^2 (1-p)^2$ term is \textit{in English}. \spc{3}
+
+\easysubproblem Let $S_n = X_1 + \ldots + X_n$ where $\Xoneton \iid \bernoulli{p}$. How is $S_n$ distributed? \spc{1}
+
+\end{enumerate}
+
+
+\problem Now that we understand both the binomial and the concept of $\iid$, we will ask some conceptual questions.
+
+\begin{enumerate}
+
+\intermediatesubproblem Recall $X_1, X_2$ from problem 1(d) which were the two sorcery-controlled coins. Let $T_2 = X_1 + X_2$. Is $T_2 \sim \binomial{2}{\half}$? Why or why not?  \spc{4}
+
+\intermediatesubproblem The human mouth has 32 teeth. If the probability of a cavity at some point in a lifetime is 5\%, is it possible to calculate the probability of 7 cavities during a lifetime using a binomial r.v. model $X \sim \binomial{32}{5\%}$ and computing $\prob{X=7}$? Why or why not?  \spc{4}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Negative Binomial} A related distribution to the binomial but still different.\\ \\
+} 
+
+\problem We will rederive the negative binomial PMF as we did in class. The probability of success if $p$ and the number of successes we wish to find is $r$.
+
+\begin{enumerate}
+
+\easysubproblem If we are waiting $x$ trials to finally see exactly $r$ successes, what does the outcome result of the last trial \textit{need} to be?  \spc{2}
+
+\easysubproblem How many trials do we witness in order to witness $r-1$ successes not counting the last trial?  \spc{2}
+
+\easysubproblem Can these $r-1$ successes happen anywhere within these $x-1$ trials?  \spc{1}
+
+\easysubproblem If you get $r-1$ successes in $x-1$ trials, how many failures do you get?  \spc{2}
+
+\easysubproblem How many ways is there to get $r-1$ successes among $x-1$ trials?  \spc{2}
+
+\easysubproblem What is the probability of getting $r-1$ successes and $x-r$ failures \textit{in that order} if successes and failures are independent?  \spc{3}
+
+\easysubproblem Use the answers in (e) and (f) to find the probability of getting $r-1$ successes in $x-1$ trials.  \spc{3}
+
+\easysubproblem Use the answers in (g) and the probability of a final success to finally derive the full PMF of the Negative Binomial distribution.  \spc{3}
+
+\easysubproblem Let $X \sim \negbin{r}{p}$. What is the support of $X$? \spc{2}
+
+\intermediatesubproblem What is the parameter space of $r$ and $p$? Be careful not to allow degenerate cases.  \spc{5}
+
+\end{enumerate}
+
+
+\problem You are testing RAM. The manufacturing process is near perfect. The probability of finding faulty RAM is about 1 in 300. We assume all RAM chips are independent with respect to whether they are faulty.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{ram.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem What is the probability you get three faulty RAM chips in a row?  \spc{1}
+
+\intermediatesubproblem What is the probability you have to investigate 100 RAM chips in order to find exactly 3 faulty chips? Compute explcitly.  \spc{4}
+
+\intermediatesubproblem What is the probability you have to investigate 500 RAM chips in order to find exactly 3 faulty chips? You can leave in choose notation and use exponents as well.  \spc{4}
+
+\hardsubproblem What is the probability you have to investigate more than 500 RAM chips to see exactly 3 faulty chips? You can leave in choose notation and use exponents as well.
+
+\end{enumerate}
+
+
+\end{document}
+
