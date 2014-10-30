@@ -88,19 +88,20 @@ Fatal pedestrian accidents on Queens Blvd. since 2001 is presented in the table 
 
 \easysubproblem Consider one year: 2001. Estimate the number of pedestrian crossings of Queens Blvd. in 2001. For those of you who ever interview for anything in business consulting, this is a good exercise. Note that this estimate does not use any of the data above nor any tools from my class that I can think of. \spc{1}
 
+
 \easysubproblem Based on your answer to (a) and the data in the first cell of Table~\ref{tab:qbacc}, estimate the probability of a pedestrian accident on one crossing. \spc{1}
 
 \easysubproblem Considering the rather large answer in (a) and the rather small answer in (b), let $X$ be the r.v. for number of pedestrian accidents in 2001. How is $X$ distributed? What are its parameter(s)? I want the value of the parameter(s) not just a greek letter. \spc{1}
 
 \intermediatesubproblem Write all the possible problems with the model you created in (c). Note: I will do something like this on the exam: build a model, tell me the problems with it, use the model.\spc{3}
 
-\easysubproblem We will now go a step further, consider the data above to be $\iid$ draws from one distribution --- the distribution you created in (c). Thus, the accidents for 2001 -- 2007 can be thought of as:
+\easysubproblem We will now go a step further, consider the data above to be $\iid$ draws from one distribution --- the distribution Poisson you created in (c). However, their parameters may now be different. Thus, the accidents for 2001 -- 2007 can be thought of as:
 
 \beqn
 X_{2001}, X_{2002}, \ldots, X_{2007} \iid f(x)  
 \eeqn
 
-where the $f(x)$ is the PMF of a model similar to the one you built in (c). Let:
+where the $f(x)$ is the PMF of a model similar to the one you built in (c) but maybe not with the same $\lambda$ parameter. Let:
 
 \beqn
 \Xbar := \frac{X_{2001} + X_{2002} + \ldots + X_{2007}}{7}
