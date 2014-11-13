@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 241 Fall 2014-2015 \\ Midterm Examination Two}
+\author{Professor Adam Kapelner}
+
+\date{November 13, 2014}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){270} ~~~ Section (A or B)~ \line(1,0){30}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using a cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is seventy five minutes and closed-book. You are allowed one page (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If I say \qu{compute,} this means the solution will be a number. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+%- hypergeometric dist
+%---- pmf, getting probs
+%---- expected value
+%---- support
+%---- knowledge that in the limit of p=K/N, N--> oo, it is a binomial
+%
+%- binomial dist
+%---- pmf, getting probs
+%---- support
+%---- summing parts of the PMF / CDF
+%- bernoulli
+%- poisson
+%---- pmf, getting probs,
+%---- knowing it's the limit of binomial
+%- geometric
+%---- getting probs
+%-neg binomial
+%---- getting probs
+%---- knowing that it is the sum of geometrics
+%---- parameter space
+%---- summing parts of the PMF / CDF
+%- iid, independence, identical dist and violations of these assumptions and their effect on the r.v.s
+%- LLN
+%- percentiles, mode, median, iqr
+%- expecation
+%---- modeling r.v.s and multiplying and adding constnats
+%- variance
+%---- modeling r.v.s and multiplying and adding constnats
+
+\problem You are opening a new luxurious fitness center in Key Garden Hills on Main St. since the closest gym is in Forest Hills. This problem will ask questions about membership that your business partner is interested in.
+
+\begin{center}
+\includegraphics[width=3in]{gym.png}
+\end{center}
+
+\noindent Before even opening the gym, you have 20 members who pre-signed up before opening day. 13 signed up at the base price (the \qu{base clients}) and 7 signed up at the premium price (the \qu{premium clients}).
+
+\benum
+
+\subquestionwithpoints{3} The gym doors open and on the first day, 8 of the 20 pre-signed members show up. Create a r.v. $X$ that models the number of premium clients who show on that first day. Write $X \sim$ something and give the values of the parameter(s) if they are known.\spc{1}
+
+\subquestionwithpoints{3} What are all the possible numbers of premium clients that can show on the first day out of those 8 members present? That is, what is the $\support{X}$? \spc{1}
+
+\subquestionwithpoints{5} What is the probability there are 4 premium clients among those 8 members present? You can leave as an expression and not compute. \spc{2}
+
+\subquestionwithpoints{2} You project that 2 months down the line there will be $n=100$ members in addition to the 20 who presigned. You also project the ratio of the number premium clients to number of base clients will remain the same. What is the probability that the next member who signs up will sign up as a premium client? Denote this probability \qu{$p$}. So write \qu{$p = $ something} below and round to the nearest two digits. \spc{1}
+
+\subquestionwithpoints{3} With every new client of the 100 who signs up, we do not know beforehand whether they will be a base or premium client. John walks in the door. Let $X$ model 1 if John is a premium client and 0 if he's a basic client. What is the distribution of $X$? Write \qu{$X \sim$ something} below and give the values of the parameter(s) if they are known.\spc{1}
+
+\subquestionwithpoints{3} Assume every potential client doesn't talk to each other and they all have the same propensity to be a premium client. This propensity is the answer to part (d). Let $X$ model the number of premium clients out of the 100 members who are projected to sign up (do not concern yourself with the 20 who pre-signed).  Write $X \sim$ something and give the values of the parameter(s) if they are known. \spc{1}
+
+\subquestionwithpoints{6} Explain in English why your answer to (f) may not be a valid model. That is, explain why the assumptions written in the question text of part (f) may not hold.  \spc{4}
+
+\subquestionwithpoints{4} Find $\prob{X=50}$, the probability that 50 of the 100 clients will be premium. You can leave your answer as an expression; you do not have to compute it.  \spc{2}
+
+\subquestionwithpoints{4} Find the probability that \textit{between} 40 and 75 of the 100 clients are premium. You can leave your answer as an expression; you do not have to compute it.  \spc{2}
+
+\subquestionwithpoints{3} You have torn out page~\pageref{tab:pmfcdf} which displays Table~\ref{tab:pmfcdf}. This table provides the values of the PMF and CDF of the r.v. you created in (f). The rows represent the values of the PMF and CDF for different values of $x \in \support{X}$. Some rows are left out (they are denoted with a vertical ellipses, $\ldots$). Which values of $x$ are left out? Write the explicit set of left out $x$ values below. \spc{1}
+
+\subquestionwithpoints{3} Write one sentence \textit{in English} about why you think those rows are left out. \spc{2}
+
+\subquestionwithpoints{1} The median of $X$ is \line(1,0){100}. 
+
+\subquestionwithpoints{1} The 10\%ile of $X$ is \line(1,0){100}. 
+
+\subquestionwithpoints{1} The mode of $X$ is \line(1,0){100}.
+
+\subquestionwithpoints{4} Compute $\expe{X}$ to two decimals. \spc{2}
+
+\subquestionwithpoints{3} Let $Y=100 - X$ which are the number of base clients. Find $\expe{Y}$ to two decimals using your answer to part (o). If you did not solve part (o), pretend the answer to (o) is 30.12. \spc{2}
+
+\subquestionwithpoints{3} Your profit on a base client is \$17.78/mo and your profit on a premium client is \$26.43/mo. Let $C$ be the r.v. that represents profit based on clients. Write $C$ as a function of $X$, $Y$ and constants below. \spc{1.5}
+
+\subquestionwithpoints{2} You have to pay \$2000/mo on expenses. Let $P$ be the r.v. representing total profit which is your answer in (q) combined with your expenses. Write $P$ below as a function of $X$, $Y$ and constants below. \spc{3}
+
+\subquestionwithpoints{5} Find $\expe{P}$. Compute explicitly to the nearest cent. \spc{2}
+
+\subquestionwithpoints{5} Your friend calculates $\var{P} = \squared{\$26.43/mo} \sigsq_X +  \squared{\$17.78/mo} \sigsq_Y$. Why is his answer wrong? Write one sentence \textit{in English} below. \spc{2}
+
+\subquestionwithpoints{5} New clients start signing up and everytime a new premium client signs up we give a bonus to the sales rep. What is the probability we have to wait for 3 new signups to give a bonus? You can leave as an expression and not compute. \spc{2}
+
+\subquestionwithpoints{3} What is the expected number of clients that sign up before we give a bonus to the sales rep? Round to the nearest two decimals.  \spc{5}
+
+\subquestionwithpoints{5} What is the probability we wait for 12 new signups to give 5 bonuses? You can leave as an expression and not compute. \spc{5}
+
+\subquestionwithpoints{3} Using your answer to part (v), what is the expected number of clients that need to sign up before we give out 5 bonuses? Round to the nearest two decimals. If you did not get an answer to (v), use 3.03 as the answer to (v). \spc{4}
+
+\subquestionwithpoints{2} Fast forward to the future. The gym is successful. There are hundreds and hundreds of clients. You are now worried about capacity on Monday evening which is the busiest gym day and time period. For five weeks you count the maximum number of people in the gym during this time period and record the data: $\braces{13,17,10,19,13}$. Calculate the sample average. Use the notation for the sample average we used in class.\spc{2}
+
+\subquestionwithpoints{2} If you collected data for many more weeks, what would the sample average become closer to? One word or one piece of notation is fine. \spc{1}
+
+\subquestionwithpoints{2} The law that explains the phenomenon in part (z) is the law of ...\spc{1}
+
+\subquestionwithpoints{3} There are hundreds and hundreds of clients and a small chance each of them will show up on  Monday evening. Model the number of people who show up one Monday evening using the r.v. $X$. Approximate $\expe{X}$  using the sample average $\xbar$ you found in part (y) and use this result to come up with the parameter(s) of $X$. Write \qu{$X \sim$ something} below. \spc{1}
+
+\subquestionwithpoints{6} Once again, you are concerned with capacity. The fire department says maximum occupancy is 23 people. If the capacity surpasses this amount, the gym can face heavy fines from the fire department. What is the probability that on a future Monday night, the gym goes over capacity? Leave as a computable expression. That is, an expression that can be put into a calculator (you can not put $\infty$ or $-\infty$ into a calculator because they are not real numbers). DO NOT compute explicitly. \spc{5}
+
+\subquestionwithpoints{5} Consider collecting $n$ data points just like the five data points you counted in part (y). This will result in a set of $n$ r.v.'s which we will denote $X_1,~X_2,~\ldots, X_n$ which are $\iid$ with expectation $\mu \in \reals$ and variance $\sigsq \in \reals$. Denote the sum of them as the r.v. $T_n = \sum_{i=1}^n X_i$. Now consider the following r.v.
+
+\beqn
+\frac{T_n - n\mu}{\sigma\sqrt{n}}
+\eeqn
+
+and find $\expe{\frac{T_n - n\mu}{\sigma\sqrt{n}}}$, the expectation of this r.v. as a function of $\mu$, $\sigsq$ and constants.  \spc{4}
+
+\subquestionwithpoints{3} [Extra Credit] Find $\se{\frac{T_n - n\mu}{\sigma\sqrt{n}}}$, the standard error of this r.v. as a function of $\mu$, $\sigsq$ and constants.  \spc{5}
+
+\subquestionwithpoints{3} [Extra Credit] Let $Y := X^2$ where $X$ is a r.v. with PMF unknown. Use the notation $\mu$ for $\expe{X}$, $\sigsq$ for $\var{X}$, $\mu_3$ for $\expe{X^3}$ and $\mu_4$ for $\expe{X^4}$. Assume $\mu,~\sigsq,~\mu_3,~\mu_4$ all exist in $\reals$. Find $\var{Y}$ as a function of $\mu,~\sigsq,~\mu_3$ and $\mu_4$.  \spc{5}
+
+\subquestionwithpoints{3} [Extra Credit] Consider $X \sim \geometric{p}$. Prove that $\prob{X = k} = \cprob{X = t +k}{X > t}$ for any $t \in \naturals$ and $k \in \naturals$.
+
+\eenum
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+  \hline
+$x$ & $f(x)$ & $F(x)$ \\ 
+  \hline
+\vdots & \vdots & \vdots \\
+  20 & 0.000 & 0.001 \\ 
+  21 & 0.001 & 0.002 \\ 
+  22 & 0.002 & 0.003 \\ 
+  23 & 0.003 & 0.007 \\ 
+  24 & 0.006 & 0.012 \\ 
+  25 & 0.009 & 0.021 \\ 
+  26 & 0.014 & 0.035 \\ 
+  27 & 0.021 & 0.056 \\ 
+  28 & 0.029 & 0.085 \\ 
+  29 & 0.039 & 0.124 \\ 
+  30 & 0.049 & 0.173 \\ 
+  31 & 0.060 & 0.233 \\ 
+  32 & 0.070 & 0.303 \\ 
+  33 & 0.077 & 0.380 \\ 
+  34 & 0.082 & 0.462 \\ 
+  35 & 0.083 & 0.546 \\ 
+  36 & 0.081 & 0.627 \\ 
+  37 & 0.076 & 0.702 \\ 
+  38 & 0.067 & 0.770 \\ 
+  39 & 0.058 & 0.828 \\ 
+  40 & 0.047 & 0.875 \\ 
+  41 & 0.037 & 0.912 \\ 
+  42 & 0.028 & 0.941 \\ 
+  43 & 0.021 & 0.961 \\ 
+  44 & 0.014 & 0.975 \\ 
+  45 & 0.010 & 0.985 \\ 
+  46 & 0.006 & 0.991 \\ 
+  47 & 0.004 & 0.995 \\ 
+  48 & 0.002 & 0.997 \\ 
+  49 & 0.001 & 0.999 \\ 
+  50 & 0.001 & 0.999 \\ 
+  51 & 0.000 & 1.000 \\
+\vdots & \vdots & \vdots \\
+   \hline
+\end{tabular}
+\caption{The PMF and CDF for a r.v. described in the problem text.}
+\label{tab:pmfcdf}
+
+\end{table}
+
+\end{document}
