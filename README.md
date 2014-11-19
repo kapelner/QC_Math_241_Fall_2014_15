@@ -9,6 +9,7 @@ You can check your grades in realtime [here](http://kapelner.com/kapelner/grades
 
 ## Homeworks
 
+* Homework 10 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw10/hw10.pdf?raw=true).
 * Homework 9 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw09/hw09.pdf?raw=true).
 * Homework 8 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw08/hw08.pdf?raw=true).
 * Homework 7 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/homeworks/hw07/hw07.pdf?raw=true).
@@ -30,6 +31,6 @@ You can check your grades in realtime [here](http://kapelner.com/kapelner/grades
 
 I *want* you to come to office hours!
 
-Time: Tues 10:30--11AM and 1:45--2:15PM, Thurs 10:30-11AM
+Time: Tues 10:30--11AM and 2:55-3:55PM, Thurs 10:30-11AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
