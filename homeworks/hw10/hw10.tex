@@ -11,7 +11,7 @@
 \newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
 
 
-\title{\colorbox{black}{\color{yellow}{HALF OF}} MATH 241 Fall 2014 Homework \#10}
+\title{MATH 241 Fall 2014 Homework \#10}
 
 \author{Professor Adam Kapelner} % STUDENTS: DELETE my name and put your name and section here e.g. \author{John Doe, Section A}. MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
 
@@ -129,7 +129,7 @@ How do you design an exponential r.v. to give large numbers --- should $\lambda$
 
 \hardsubproblem Pretend you are approximating the exponential with a geometric r.v.. Let $n = 1000$ and $p = 0.002$ to have $\lambda = 2$. Show that the expectation of that geometric r.v. is the same as $\expe{T}$ in the previous problem.  \spc{3}
 
-\extracreditsubproblem Let $T \sim \exponential{\lambda}$. Show that $\var{T} = 1/\lambda^2$ using the definition of expectation for continuous r.v.'s. Infinitely googlable.  \spc{10}
+\extracreditsubproblem Let $T \sim \exponential{\lambda}$. Show that $\var{T} = 1/\lambda^2$ using the definition of expectation for continuous r.v.'s. Very googlable.  \spc{10}
 
 \easysubproblem Let $T \sim \exponential{\lambda}$. Show that $\se{T} = 1/\lambda$. If you can't do the last question, do this one by assuming the answer of the last question. \spc{3}
 
@@ -145,7 +145,12 @@ where $f(x)$ was the PMF. For continuous r.v.'s, keep the definition the same bu
 
 \easysubproblem Let's say in one unit of time, the number of \qu{events} is distributed as $X \sim \poisson{\lambda}$. How is the \textit{inter-arrival} time between the events distributed? That is, how long do you wait in between events? You just need to say $T \sim$ something below.  \spc{10}
 
-\intermediatesubproblem Prove the memorylessness property of the geometric r.v.  \spc{6}
+\intermediatesubproblem Prove the memorylessness property of the geometric r.v. using the definition of memorylessness of:
+
+\beqn
+\prob{X > x} = \cprob{X > x_0 + x}{X > x_0}
+\eeqn
+ \spc{6}
 
 \intermediatesubproblem Prove the memorylessness property of the exponential r.v.  \spc{6}
 
@@ -171,7 +176,72 @@ That is, prove the convolution of $r$ $\iid$ $\exponential{\lambda}$ has the Erl
 f_T(x) = \frac{\lambda^r x^{r-1} e^{-\lambda x}}{(r - 1)!}
 \eeqn
 
-You should use induction.  \spc{1}
+You should use induction.  \spc{20}
+
+\end{enumerate}
+
+\problem We will now get our feet wet with the Uniform r.v.
+
+\begin{enumerate}
+\easysubproblem Let $X \sim U(0,1)$, the standard uniform r.v. What is the support of $X$? \spc{1}
+
+\easysubproblem Let $X \sim U(0,1)$. What is the PDF of $X$? \spc{2}
+
+\intermediatesubproblem Let $X \sim U(0,1)$. Draw the CDF of $X$. \spc{5}
+
+\easysubproblem Let $X \sim U(a,b)$, the general uniform r.v. What is the PDF of $X$? \spc{2}
+
+\intermediatesubproblem Let $X \sim U(a,b)$. Solve for the CDF of $X$ by finding the correct antiderivative of $f(x)$, the PDF from the last problem (see notes). \spc{5}
+
+\easysubproblem Let $X \sim U(a,b)$. Find the $\median{X}$ using the CDF from the previous problem. \spc{4}
+
+\hardsubproblem  Let $X \sim U(a,b)$. Find the arbitrary $\text{Quantile}[X, p]$ where $p \in \zeroonecl$. \spc{5}
+
+\extracreditsubproblem Let $X \sim U(a,b)$. Compute the arbitrary $n$th moment, $\expe{X^n}$.  \spc{15}
+
+\hardsubproblem  Let $X \sim U(a,b)$. I bungled the variance calculation in class because I mis-factored $b^3-a^3$. Find $\var{X}$ using the formula $\var{X} = \expe{X^2} - \musq$ where you assume that we know $\mu = \half(a+b)$ which was proved in class. \spc{5}
+
+\end{enumerate}
+
+\problem This is an introduction to the normal r.v. We will do more with it for next homework assignment.
+
+\begin{enumerate}
+\easysubproblem Let $Z \sim \stdnormnot$. Write the density $f_Z(x)$ and verify that its value is positive for all real numbers. \spc{2}
+
+\easysubproblem What is the $\support{Z}$? \spc{1}
+
+\easysubproblem Use the $\Phi(\cdot)$ notation to denote $\int_{-\infty}^2 f_Z(x) dx$. \spc{1}
+
+\easysubproblem What is $\prob{Z \in \bracks{-1, 1}}$? \spc{1}
+
+\easysubproblem What is $\prob{Z \in \bracks{-2, 2}}$? \spc{1}
+
+\easysubproblem What is $\prob{Z \in \bracks{-3, 3}}$? \spc{1}
+
+
+\intermediatesubproblem Draw the density $f_Z(x)$ and be careful to denote the x-axis like we did in class. Then illustrate the empirical rule just like we did in class. I want to see the 68, 95, 99.7\%'s denoted as areas. \spc{5}
+
+\intermediatesubproblem Draw $\Phi(x)$. Use the same scale as your drawing of the PDF of $Z$. \spc{5}
+
+\easysubproblem What is $\prob{Z \notin \bracks{-1, 1}}$? \spc{1}
+
+\easysubproblem What is $\prob{Z \notin \bracks{-2, 2}}$? \spc{1}
+
+\easysubproblem What is $\prob{Z \notin \bracks{-3, 3}}$? \spc{1}
+
+\easysubproblem What is $\prob{Z > 1}$? \spc{1}
+
+\easysubproblem What is $\prob{Z > -1}$? \spc{1}
+
+\easysubproblem What is $\prob{Z < -1}$? \spc{1}
+
+\easysubproblem What is $\prob{Z < -2}$? \spc{1}
+
+\easysubproblem What is $\prob{Z > 3}$? \spc{1}
+
+\intermediatesubproblem What is $\prob{Z \in \parens{-3, 1}}$? \spc{1}
+
+\extracreditsubproblem Prove that $\int_{\reals} f_Z(x) dx =1$.
 
 \end{enumerate}
 
