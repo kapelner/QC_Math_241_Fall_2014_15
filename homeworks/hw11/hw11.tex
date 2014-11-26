@@ -140,16 +140,16 @@ M_{T_n}(t) = \prod_{i=1}^n M_{X_i}(t)
 
 
 
-\hardsubproblem Show that the sum of two independent r.v.'s $T_1 \sim \binomial{n_1}{p}$ and $T_2 \sim \binomial{n_2}{p}$ is itself a binomial and find its parameters. Does this make sense? \spc{4}
+\hardsubproblem Show that the sum of two independent r.v.'s $T_1 \sim \binomial{n_1}{p}$ and $T_2 \sim \binomial{n_2}{p}$ is a new r.v. which itself is a binomial and find its parameters. Does this make sense given what you proved in (e)? \spc{4}
 
 
-\easysubproblem Let $X_1, \ldots, X_n \iid \geometric{p}$. Assume that the mgf for the geometric is:
+\easysubproblem Let $X_1, \ldots, X_r \iid \geometric{p}$. Assume that the mgf for the geometric is:
 
 \beqn
 M_{X_i}(t) = \frac{pe^t}{1-(1-p) e^t}
 \eeqn
 
-Let $T = X_1 + \ldots + X_n$. We know from our study of discrete r.v.'s that $T \sim \negbin{r}{p}$ which was illustrated conceptually. However, this was never proven. We will prove it here. Using the fact that:
+Let $T = X_1 + \ldots + X_r$. We know from our study of discrete r.v.'s that $T \sim \negbin{r}{p}$ which was illustrated conceptually. However, this was never proven. We will prove it here. Using the fact that:
 
 \beqn
 M_T(t) = \tothepow{\frac{pe^t}{1-(1-p) e^t}}{r}
