@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 241 Fall 2014-2015 \\ Final Examination}
+\author{Professor Adam Kapelner}
+
+\date{December 18, 2014}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){270} ~~~ Section (A or B)~ \line(1,0){30}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definition:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is 120 minutes and closed-book. You are allowed three pages (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If I say \qu{compute,} this means the solution will be a number. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total. Partial credit will be granted for incomplete answers on most of the questions. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem In this problem, we will investigate mock situations involving waiting for the Q64 bus.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{q64.png}
+\end{center}
+\end{figure}
+
+
+\benum
+\subquestionwithpoints{4} Let's say the Q64 is scheduled during rush hour to come every 8 min. Assume the bus really does keep to this schedule. You show up at the bus stop during rush hour at a random time. What is the probability you wait more than 2min for the next Q64 bus? \spc{5}
+
+\subquestionwithpoints{4} Let's say the time when the next Q64 comes can be modeled as $T \sim \exponential{\lambda = 0.125}$ where the support of the r.v. is measured in minutes. What is the probability you wait more than 2min for the next Q64 bus? \spc{5}
+
+\subquestionwithpoints{3} Let's say the time when the next Q64 comes can be modeled as $T \sim \exponential{\lambda = 0.125}$ where the support is measured in minutes. You've been sitting at the bus stop and have already waited two minutes. What is the probability given that you've been waiting that you wait more than \textit{another} 2min for the next Q64 bus? \spc{5}
+
+\eenum
+
+
+\problem In this problem, we will investigate moment generating functions (mgf's) and the Central Limit Theorem.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{clt.png}
+\end{center}
+\end{figure}
+
+
+\benum
+
+\subquestionwithpoints{4} Let $X \sim \bernoulli{\half}$. Show that $M_X(t)$, the mgf of $X$ is $\half(1+e^t)$.\spc{3}
+
+\subquestionwithpoints{4} Set up an infinite sum that if solved would provide the mgf for $X$, a Poisson r.v. with parameter $\lambda$.  Do not attempt to solve or simplify! \spc{5}
+
+%\subquestionwithpoints{3} Set up an improper integral that if solved would provide the mgf for an Exponential r.v. with parameter $\lambda$. Do not attempt to solve or simplify! \spc{3}
+
+\subquestionwithpoints{4} If $X \sim \text{Erlang}(k, \lambda)$, which is the continuous analogue of the negative binomial distribution, then the PDF of $X$ is $f(x) = \frac{\lambda^k x^{k-1} e^{-\lambda k}}{(k-1)!}$ and its mgf is $M_X(t) = (1 - t/\lambda)^{-k}$. Show that $\expe{X} = k/\lambda$ using any method you wish. If you cannot solve all the way, describe the method you would use to solve for partial credit. Hint: be careful with the negative sign.\spc{6}
+
+\subquestionwithpoints{4} If $Z_1, Z_2 \iid \stdnormnot$ what is the mgf of $
+\oneoversqrt{2}Z_1 + \oneoversqrt{2}Z_2$? Hint: the mgf for the standard normal is $M_Z(t) = e^{t^2/2}$.\spc{6}
+
+%\subquestionwithpoints{3} If $X \sim \normnot{\mu}{\sigsq}$ then $M_X(t) =e^{\mu t + \overtwo{\sigsq t^2}}$. Use this fact and the answer from the previous problem to demonstrate that $\se{Z_1 + Z_2} = \sqrt{2}$. \spc{3}
+
+
+\subquestionwithpoints{3} If $X_1, \ldots, X_n \iid$ with some unknown distribution that has finite mean and variance, what is the distribution of the following quantity as $n$ gets large? Write your answer to the right of the \qu{distributed as} symbol. The brand name notation with the correct parameters clearly marked or the PDF is valid. No other answer is valid.
+
+\beqn
+\frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}} \sim \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+\eeqn \spc{0}
+
+\subquestionwithpoints{3} We are interested in using confidence intervals and hypothesis testing for a sample and we have an idea of the distribution of the underlying r.v. which is sampled $\iid$ from a well-specified population. The following image is the result of some simulations. Below what \textit{minimum} sample size what you not trust the validity of confidence intervals and hypothesis tests? Write $n < $ something below the image.
+
+\begin{changemargin}{-0.6in}{0in}
+\includegraphics[width=7in]{clt.pdf}
+\end{changemargin}
+
+
+\eenum
+\pagebreak
+
+\problem In this problem, we will be investigating a call center. Callers call in and are helped by a customer service representative and then answer a survey later if they're satisfied or not: \qu{yes} or \qu{no.} Note that the vast majority of callers do not bother with the survey and just hang up, thus we don't know if they were satisfied or not. Assume the satisfaction outcome of all calls are $\iid$ Bernoulli r.v.'s.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{callcenter.jpg}
+\end{center}
+\end{figure}
+
+\benum
+
+\subquestionwithpoints{2} The company is interested in investigating George, one of the customer service representatives, on the basis of surveyed customer satisfaction. They look at a random sample of 200 of George's calls and find that 168 are satisfied. Calculate $\phat$ to two decimal places. \spc{3}
+
+\subquestionwithpoints{5} Provide a 95\% confidence interval for the true proportion of customers satisfied by George's phone call on the post-call survey.  Use correct notation for the CI with both subscripts clearly notated. Compute explicitly and round to 3 decimal places.\spc{9}
+
+\subquestionwithpoints{3} Employ one of the two correct interpretations of confidence intervals we discussed in class to interpret this interval appropriately \textit{in English}. Do not write two interpretations, only one of the two interpretations. \spc{3}
+
+\subquestionwithpoints{2} What can you NOT say about this interval that you may really want to say? Answer \textit{in English}. \spc{3}
+
+\subquestionwithpoints{2} Does this also provide 95\% coverage for the true proportion of \textit{all}  callers who satisfied with George's phone assistance? Explain why or why not. Yes or no without explanation will not receive credit.\spc{4}
+
+\subquestionwithpoints{2} The company is aiming for 90\% customer satisfaction (as measured by the survey). If the customers are satisfied less than that proportion of the time, they will be unhappy. If they are satisfied more than 90\% of the time, then representatives are probably spending too much time with each customer which will mean increased expenditure for the company. So having customer satisfaction\textit{ too low} is bad and having customer satisfaction \textit{too high }is also bad albeit for different reasons. Write the null hypothesis and alternative hypothesis clearly below. \spc{3}
+
+\subquestionwithpoints{5} For a sample size of $n=200$, what is the acceptance region at $\alpha = 5\%$? Your answer must be in set notation. Compute explicitly and round to three decimals. \spc{3}
+
+\subquestionwithpoints{3} Set your probability of Type I error to be 5\%. Then, using the $\phat$ (the result of the experiment) you computed in (a), run a hypothesis test using the hypotheses you provided in (f) and the acceptance region you computed in (g) and finally interpret the result \textit{in English}. \spc{3}
+
+\subquestionwithpoints{2} [Extra Credit] Regardless of your answer to (g), the company has a policy of firing those people who do not have 90\% customer satisfaction over their phone calls. What would a type II error be from the company's perspective? Answer \textit{in English}. \spc{3}
+
+\subquestionwithpoints{4} [Extra Credit] The company now wants to test against $H_a : p = 0.7$ to find representatives who are not satisfying the customers. How much more likely is George to belong to the $H_0$ distribution relative to the $H_a$ distribution? Partial credit given. Do not attempt until you have finished the exam.  \spc{5}
+
+\subquestionwithpoints{5} [Extra Credit] At $\alpha=5\%$, find the probability of a Type II error given $H_a : p = 0.7$. Partial credit given. Do not attempt until you have finished the exam. \spc{7}
+
+\eenum
+
+
+\problem In the standard American \qu{pick up sticks} game, there are 30 sticks --- 1 black, 7 red, 7 blue, 8 green and 7 yellow. The sticks are shuffled at random and allowed to drop on the floor in a messy pile strewn in random directions with random overlaps such as seen below:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{pickup.png}
+\end{center}
+\end{figure}
+
+Gameplay proceeds as follows. A player attempts to pick up a stick out of the pile without allowing any other stick to move. If they remove a stick without moving any other sticks, they collect that stick and score points and then they go again. Points are as follows: 25 points for black, 10 points for red, 5 points for blue, 2 points for green and one point for yellow. Number of sticks and points is summed up in Table~\ref{tab:pickup}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|cc}
+Stick color & Number of sticks & Point value \\ \hline
+Black & 1 & 25 \\
+Red & 7 & 10 \\
+Blue & 7 & 5 \\
+Green & 8 & 2 \\
+Yellow & 7 & 1 \\ \hline
+Totals: & 30 & 153
+\end{tabular}
+\caption{Pick up Sticks game information}
+\label{tab:pickup}
+\end{table}
+
+\benum
+
+%\subquestionwithpoints{3} Assume a new random shuffle where the sticks allowed to drop onto a pile where every stick is on top of another stick in a specific order. What is the probability that the black stick is on top with no other sticks above it? \spc{3}
+
+\subquestionwithpoints{2} Assume a new random shuffle. I successfully remove the top three sticks off the pile. What is the probability of (in those three sticks) getting the black stick, a red stick and a blue stick \textit{in that order}? Do \textit{not} compute explicitly. \spc{3}
+
+%\subquestionwithpoints{3} Assume a new random shuffle. I successfully remove the top three sticks off the pile. What is the probability of (in those three sticks) having the black stick, a red stick and a blue stick \textit{in any order}? \spc{3}
+
+\subquestionwithpoints{5} Assume a new random shuffle. At the end of the game, I have 15 sticks. What is the probability I have 3 red, 3 blue, 5 green and 4 yellow \textit{in any order}? Do \textit{not} compute explicitly.  \spc{5}
+
+\subquestionwithpoints{2} Assume a new random shuffle. At the end of the game, I have 15 sticks. Create a r.v. that models the number of red sticks I have out of my 15 collected sticks. You should write $X \sim$ something below and write the name of the r.v. and clearly indicate the parameter(s) in this r.v. You do not have to write the PMF/PDF of this r.v. \spc{3}
+
+%\subquestionwithpoints{3} Find the probability I wind up with 5 red sticks out of my final 15 sticks. Compute explicitly. \spc{3}
+
+\subquestionwithpoints{2} Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Create a r.v. that models 1 if I have the black stick and 0 if I do not have the black stick. You should write $X \sim$ something below and write the name of the r.v. and clearly indicate the parameter(s) in this r.v. \spc{2}
+
+
+\subquestionwithpoints{2} Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Create a r.v. that models the number of sticks I have at the end of the game regardless of their color. You should write $X \sim$ something below and write the name of the r.v. and clearly indicate the parameter(s) in this r.v. \spc{2}
+
+\subquestionwithpoints{2} Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Find the probability I wind up with 15 sticks at the end of the game. Do \textit{not} compute explicitly but the number must be computable (no $\infty$'s allowed).  \spc{3}
+
+\subquestionwithpoints{3} Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Find the probability I wind up with 20 or more sticks at the end of the game. Do \textit{not} compute explicitly but the number must be computable (no $\infty$'s allowed). \spc{3}
+
+\subquestionwithpoints{4} Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Find the expected number of points I have from green sticks only. That is if you add up my score, this is the component of the score from my green sticks. \spc{3}
+
+\subquestionwithpoints{5} [Extra Credit] Assume a new random shuffle. Assume the probability of me having a stick at the end of the game is 0.5 regardless of its color. Find the expected number of points I have at the end of the game. You can get partial credit on this extra credit.  \spc{7}
+
+\subquestionwithpoints{2} Me and the other player are both really good at pick up sticks but it is still a difficult game. Each time we go to take a stick off, we have probability 20\% that we successfully remove the stick without jiggling another stick. What is the probability we remove three sticks successfully in three turns? Hint: you do not need to consider the fact that there are two players here. Imagine there is just one player playing against himself. \spc{3}
+
+\subquestionwithpoints{3} Assuming we have probability 20\% that we successfully remove a stick without jiggling another stick, what is the probability we take six turns to successfully remove one stick? Compute explicitly and round to 3 decimal places. \spc{3}
+
+%\subquestionwithpoints{3} Assuming we have probability 20\% that we successfully remove a stick without jiggling another stick, what is the expected number of turns to successfully remove one stick? Compute explicitly. \spc{3}
+
+\subquestionwithpoints{3} Assuming we have probability 20\% that we successfully remove a stick without jiggling another stick, what is the probability we take ten turns to successfully remove six sticks? You do \textit{not} need to compute explicitly. \spc{5}
+
+\subquestionwithpoints{3} Assuming we have probability 20\% that we successfully remove a stick without jiggling another stick, what is the expected number of turns to complete the game? Compute explicitly. \spc{4}
+
+\subquestionwithpoints{2} You play $n$ games where $n$ is really large. Assume $n$ is large enough to establish probabilities of certain outcomes. What definition of probability are you using here? You do not need to write a sentence --- a few words is fine.\spc{3}
+
+\subquestionwithpoints{3} The black stick is very helpful to winning the game of pick up sticks. Let $B$ be the event you have the black stick at some point in the game in your possession and let $W$ be the event that you win. Having the black stick seems to be 50-50 when looking at game data, so $\prob{B} = 0.5$. But if you have the black stick, you win 80\% of the time. What is the probability you both win the game and have the black stick? \spc{3}
+
+\subquestionwithpoints{5} Looking at data, you also learn that the probability of both winning and \textit{not} having the black stick is 10\%. Given this new information and the information given in the previous problem as well as your answer to the previous problem, what is the probability among games you've won that you had the black stick?\spc{3}
+
+
+\eenum
+
+
+
+\end{document}
