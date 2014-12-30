@@ -26,7 +26,7 @@ You can check your grades in realtime [here](http://kapelner.com/kapelner/grades
 
 * Midterm I - Thursday, October 2 (in class). Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true).
 * Midterm II - Thursday, November 13 (in class). Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true).
-* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA.
+* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA. Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final_solutions.pdf?raw=true).
 
 ## Office Hours
 
